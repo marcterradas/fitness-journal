@@ -2,8 +2,7 @@
   "name": "garage-gym-web",
   "version": "1.0.0",
   "description": "garage gym web",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcterradas/garage-gym-web.git"
@@ -13,5 +12,8 @@
   "bugs": {
     "url": "https://github.com/marcterradas/garage-gym-web/issues"
   },
-  "homepage": "https://github.com/marcterradas/garage-gym-web#readme"
+  "homepage": "https://github.com/marcterradas/garage-gym-web#readme",
+  "dependencies": {
+    "next": "13.1.6"
+  }
 }

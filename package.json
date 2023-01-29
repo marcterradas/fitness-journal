@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/marcterradas/garage-gym-web#readme",
   "dependencies": {
-    "next": "13.1.6"
+    "next": "13.1.6",
+    "react": "18.2.0"
   }
 }

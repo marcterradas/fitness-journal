@@ -2,7 +2,12 @@
   "name": "garage-gym-web",
   "version": "1.0.0",
   "description": "garage gym web",
-  "scripts": {},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcterradas/garage-gym-web.git"

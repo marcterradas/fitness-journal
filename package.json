@@ -1,7 +1,7 @@
 {
-  "name": "garage-gym-web",
+  "name": "nextjs-template",
   "version": "1.0.0",
-  "description": "garage gym web",
+  "description": "nextjs-template",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcterradas/garage-gym-web.git"
+    "url": "git+https://github.com/marcterradas/nextjs-template.git"
   },
   "author": "marcterradas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/marcterradas/garage-gym-web/issues"
+    "url": "https://github.com/marcterradas/nextjs-template/issues"
   },
-  "homepage": "https://github.com/marcterradas/garage-gym-web#readme",
+  "homepage": "https://github.com/marcterradas/nextjs-template#readme",
   "dependencies": {
     "@headlessui/react": "1.7.8",
     "next": "13.1.6",

@@ -1,2 +1,1 @@
-# garage-gym-web
-garage gym web
+# nextjs-template

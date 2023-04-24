@@ -1,7 +1,9 @@
 {
   "name": "workouts-journal",
   "version": "1.0.0",
+  "description": "",
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "workspaces": [
+    "packages/*"
+  ]
 }

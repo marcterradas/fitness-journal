@@ -1,9 +1,0 @@
-{
-  "name": "workouts-journal",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {},
-  "workspaces": [
-    "packages/*"
-  ]
-}

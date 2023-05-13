@@ -1,5 +1,12 @@
+import Head from "@/application/layout/Head";
+
 export default function Home() {
-  return <main>Workouts Journal</main>;
+  return (
+    <>
+      <Head />
+      <main>Workouts Journal</main>;
+    </>
+  );
 }
 
 export async function getStaticProps({ locale }) {

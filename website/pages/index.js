@@ -1,10 +1,14 @@
 import Head from "@/application/layout/Head";
+import Navbar from "@/application/layout/Navbar";
 
 export default function Home() {
   return (
     <>
       <Head />
-      <main>Workouts Journal</main>;
+      <div className="px-4 m-auto max-w-screen-2xl">
+        <Navbar />
+        <main>Workouts Journal</main>
+      </div>
     </>
   );
 }

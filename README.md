@@ -1,4 +1,4 @@
-# workouts_journal
+# Fitness-Journal
 
 A new Flutter project.
 

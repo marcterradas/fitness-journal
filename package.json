@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "phoenix": "rm -rf .expo node_modules && npm ci"
   },
   "dependencies": {
     "expo": "51.0.31",

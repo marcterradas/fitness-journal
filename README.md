@@ -1,15 +1,21 @@
 <h1 align='center'>Fitness Journal</h1>
 
-### Project setup
+### Intall dependencies
 
 ```
-npm i
+npm ci
 ```
 
 ### Remove dependencies and install again
 
 ```
 npm run phoenix
+```
+
+### Start expo server
+
+```
+npm run expo
 ```
 
 ### Compiles and hot-reloads for development (Web)
@@ -28,4 +34,10 @@ npm run android
 
 ```
 npm run ios
+```
+
+### Lint code
+
+```
+npm run lint
 ```

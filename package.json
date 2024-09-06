@@ -22,7 +22,11 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "eslint": "^8.57.0",
-    "eslint-config-expo": "^7.1.2"
+    "eslint-config-expo": "^7.1.2",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0"
   },
   "private": true
 }

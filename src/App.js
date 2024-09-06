@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View } from 'react-native'
 import { registerRootComponent } from 'expo'
 
-export function App() {
+export function App () {
   return (
     <View style={styles.container}>
       <Text>Fitness Journal</Text>
@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    justifyContent: 'center'
+  }
+})
 
 export default registerRootComponent(App)

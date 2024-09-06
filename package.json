@@ -2,6 +2,7 @@
   "name": "fitness-journal",
   "version": "1.0.0",
   "main": "src/App.js",
+  "type": "module",
   "engines": {
     "node": ">=18.20.0",
     "npm": ">=10.7.0"
@@ -12,7 +13,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "phoenix": "rm -rf .expo node_modules && npm ci",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:unit": "vitest"
   },
   "dependencies": {
     "@expo/metro-runtime": "3.2.3",
@@ -30,7 +32,8 @@
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.6.0"
+    "eslint-plugin-promise": "^6.6.0",
+    "vitest": "^2.0.5"
   },
   "private": true
 }

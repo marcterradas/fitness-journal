@@ -2,6 +2,10 @@
   "name": "fitness-journal",
   "version": "1.0.0",
   "main": "src/App.js",
+  "engines": {
+    "node": ">=18.20.0",
+    "npm": ">=10.7.0"
+  },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

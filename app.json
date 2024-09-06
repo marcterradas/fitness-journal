@@ -1,5 +1,6 @@
 {
   "expo": {
+    "entryPoint": "./src/App.js",
     "name": "fitness-journal",
     "slug": "fitness-journal",
     "version": "1.0.0",

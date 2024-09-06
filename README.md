@@ -41,3 +41,9 @@ npm run ios
 ```
 npm run lint
 ```
+
+### Run unit test
+
+```
+pnpm run test:unit
+```

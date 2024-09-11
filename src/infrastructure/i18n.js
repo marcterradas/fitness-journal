@@ -1,9 +1,9 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-import en from './translations/en.json'
-import es from './translations/es.json'
-import cat from './translations/cat.json'
+import en from '@/infrastructure/translations/en.json'
+import es from '@/infrastructure/translations/es.json'
+import cat from '@/infrastructure/translations/cat.json'
 
 i18n
   .use(initReactI18next)

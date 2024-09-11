@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { registerRootComponent } from 'expo'
 import { t } from 'i18next'
 
-import './infrastructure/i18n'
+import '@/infrastructure/i18n'
 
 export function App () {
   return (

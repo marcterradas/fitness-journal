@@ -8,5 +8,17 @@ module.exports = {
         }
       }
     ]
+  ],
+  plugins: [
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        extensions: ['.js', '.json'],
+        alias: {
+          '@': './src/'
+        }
+      }
+    ]
   ]
 }

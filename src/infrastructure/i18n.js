@@ -8,16 +8,9 @@ import cat from './translations/cat.json'
 i18n
   .use(initReactI18next)
   .init({
-    compatibilityJSON: 'v3',
     lng: 'en',
     fallbackLng: 'en',
-    resources: { en, es, cat },
-    interpolation: {
-      escapeValue: false
-    },
-    react: {
-      useSuspense: false
-    }
+    resources: { en, es, cat }
   })
 
 export default { i18n }

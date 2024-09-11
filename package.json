@@ -20,8 +20,10 @@
     "@expo/metro-runtime": "3.2.3",
     "expo": "51.0.31",
     "expo-status-bar": "1.12.1",
+    "i18next": "^23.15.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^15.0.1",
     "react-native": "0.74.5",
     "react-native-web": "0.19.10"
   },

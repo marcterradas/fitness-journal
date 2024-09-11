@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View } from 'react-native'
 import { registerRootComponent } from 'expo'
+import { t } from 'i18next'
+
+import './infrastructure/i18n'
 
 export function App () {
   return (
     <View style={styles.container}>
-      <Text>Fitness Journal</Text>
+      <Text>{t('test')}</Text>
       <StatusBar style="auto" />
     </View>
   )

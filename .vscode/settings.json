@@ -6,4 +6,5 @@
         "src/infrastructure/translations"
     ],
     "i18n-ally.keystyle": "nested",
+    "i18n-ally.defaultNamespace": "translation",
 }

@@ -11,7 +11,7 @@ i18n
     lng: 'en',
     fallbackLng: 'en',
     resources: { en, es, cat },
-    compatibilityJSON: 'v3',
+    compatibilityJSON: 'v3'
   })
 
 export default { i18n }

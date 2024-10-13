@@ -10,7 +10,8 @@ i18n
   .init({
     lng: 'en',
     fallbackLng: 'en',
-    resources: { en, es, cat }
+    resources: { en, es, cat },
+    compatibilityJSON: 'v3',
   })
 
 export default { i18n }

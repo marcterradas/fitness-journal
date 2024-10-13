@@ -9,9 +9,9 @@
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "android": "expo start --android --reset-cache",
+    "ios": "expo start --ios --reset-cache",
+    "web": "expo start --web --reset-cache",
     "phoenix": "rm -rf .expo node_modules && npm ci",
     "lint": "eslint .",
     "test:unit": "vitest"

@@ -12,4 +12,4 @@ const useDeviceType = () => {
   }
 }
 
-export default useDeviceType
+export { useDeviceType }

@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { registerRootComponent } from 'expo'
 import { t } from 'i18next'
-import useDeviceType from '@/infrastructure/hooks/useDeviceType'
+import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 
 import '@/infrastructure/i18n'
 

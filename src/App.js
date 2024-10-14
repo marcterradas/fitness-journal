@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { registerRootComponent } from 'expo'
 import { t } from '@/infrastructure/hooks/useTranslations'

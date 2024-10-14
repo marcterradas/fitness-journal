@@ -2,7 +2,7 @@
 module.exports = {
   extends: ['expo', 'standard'],
   rules: {
-    'import/no-unresolved': 'off',
+    'import/no-unresolved': 'off', // required for importing with the alias.
     'import/order': [
       'error',
       {

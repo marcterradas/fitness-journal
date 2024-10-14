@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
-import { registerRootComponent } from 'expo'
+
+import { registerRootComponent } from '@/infrastructure/hooks/useRegisterRootComponent'
 import { t } from '@/infrastructure/hooks/useTranslations'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 

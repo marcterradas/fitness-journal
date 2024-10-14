@@ -1,9 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 
+import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { registerRootComponent } from '@/infrastructure/hooks/useRegisterRootComponent'
 import { t } from '@/infrastructure/hooks/useTranslations'
-import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
-
 import '@/infrastructure/i18n'
 
 export function App () {

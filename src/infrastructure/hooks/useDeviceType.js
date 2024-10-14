@@ -1,4 +1,5 @@
 import { useWindowDimensions } from 'react-native'
+
 import config from '@/infrastructure/config'
 
 const useDeviceType = () => {

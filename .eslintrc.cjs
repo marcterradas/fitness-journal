@@ -2,6 +2,19 @@
 module.exports = {
   extends: ['expo', 'standard'],
   rules: {
-    'import/no-unresolved': 'off'
+    'import/no-unresolved': 'off',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['parent', 'sibling', 'index']
+        ],
+        'newlines-between': 'always',
+        alphabetize: { order: 'asc', caseInsensitive: true }
+      }
+    ]
   }
 }

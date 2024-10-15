@@ -1,8 +1,8 @@
 import { View } from 'react-native'
 
-function Box ({ children }) {
+function Box ({ children, style }) {
   return (
-    <View>
+    <View style={style}>
         {children}
     </View>
   )

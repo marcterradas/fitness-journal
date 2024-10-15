@@ -1,8 +1,8 @@
 import { Text } from 'react-native-web'
 
-function Paragraph ({ children }) {
+function Paragraph ({ children, style }) {
   return (
-    <Text>
+    <Text style={style}>
         {children}
     </Text>
   )

@@ -1,6 +1,5 @@
-import { Text } from 'react-native'
-
 import { Box } from '@/infrastructure/components/Box'
+import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { registerRootComponent } from '@/infrastructure/hooks/useRegisterRootComponent'
 import '@/infrastructure/i18n'
@@ -11,7 +10,7 @@ export function App () {
   if (isDesktop) {
     return (
       <Box>
-        <Text>Desktop ...</Text>
+        <Paragraph>Desktop ...</Paragraph>
       </Box>
     )
   }
@@ -19,7 +18,7 @@ export function App () {
   if (isMobile) {
     return (
       <Box>
-        <Text>Mobile ...</Text>
+        <Paragraph>Mobile ...</Paragraph>
       </Box>
     )
   }

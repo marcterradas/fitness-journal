@@ -1,5 +1,6 @@
 import { DesktopSideBar } from '@/application/DesktopSideBar'
 import { MobileButtonBar } from '@/application/MobileButtonBar'
+import { MobileNavBar } from '@/application/MobileNavBar'
 
 import '@/infrastructure/i18n'
 import { Box } from '@/infrastructure/components/Box'
@@ -41,6 +42,7 @@ export function App () {
     return (
       <Box style={styles.mobile}>
         <Box style={styles.mobileContent}>
+          <MobileNavBar />
           <Paragraph>Content ...</Paragraph>
         </Box>
         <MobileButtonBar />

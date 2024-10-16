@@ -1,4 +1,5 @@
 import { DesktopSideBar } from '@/application/DesktopSideBar'
+import { MobileButtonBar } from '@/application/MobileButtonBar'
 
 import '@/infrastructure/i18n'
 import { Box } from '@/infrastructure/components/Box'
@@ -10,26 +11,39 @@ import { useStyles } from '@/infrastructure/hooks/useStyles'
 export function App () {
   const { isDesktop, isMobile } = useDeviceType()
   const styles = useStyles({
-    app: {
+    desktop: {
       display: 'flex',
       flexDirection: 'row',
       height: '100vh'
+    },
+    mobile: {
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100vh',
+      width: '100vw',
+      justifyContent: 'space-between'
+    },
+    mobileContent: {
+      flex: 1
     }
   })
 
   if (isDesktop) {
     return (
-      <Box style={styles.app}>
+      <Box style={styles.desktop}>
         <DesktopSideBar />
-        <Paragraph>content ...</Paragraph>
+        <Paragraph>Content ...</Paragraph>
       </Box>
     )
   }
 
   if (isMobile) {
     return (
-      <Box>
-        <Paragraph>Mobile ...</Paragraph>
+      <Box style={styles.mobile}>
+        <Box style={styles.mobileContent}>
+          <Paragraph>Content ...</Paragraph>
+        </Box>
+        <MobileButtonBar />
       </Box>
     )
   }

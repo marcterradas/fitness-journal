@@ -18,6 +18,7 @@ module.exports = {
     ],
     'no-param-reassign': ['error', { props: false }],
     'no-console': 'error',
-    'no-debugger': 'error'
+    'no-debugger': 'error',
+    'react/jsx-indent': ['error', 2]
   }
 }

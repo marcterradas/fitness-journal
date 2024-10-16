@@ -12,13 +12,28 @@ module.exports = {
           'internal',
           ['parent', 'sibling', 'index']
         ],
+        pathGroups: [
+          {
+            pattern: '@/application/**',
+            group: 'internal',
+            position: 'before'
+          },
+          {
+            pattern: '@/infrastructure/**',
+            group: 'internal',
+            position: 'before'
+          },
+          {
+            pattern: '@/domain/**',
+            group: 'internal',
+            position: 'before'
+          }
+        ],
         'newlines-between': 'always',
         alphabetize: { order: 'asc', caseInsensitive: true }
       }
     ],
     'no-param-reassign': ['error', { props: false }],
-    'no-console': 'error',
-    'no-debugger': 'error',
-    'react/jsx-indent': ['error', 2]
+    'no-console': 'error'
   }
 }

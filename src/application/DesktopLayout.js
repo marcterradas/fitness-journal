@@ -1,11 +1,10 @@
 import { DesktopSideBar } from '@/application/DesktopSideBar'
 
 import { Box } from '@/infrastructure/components/Box'
-import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function DesktopLayout () {
+function DesktopLayout ({ children }) {
   const { screenHeight } = useDimensions()
   const styles = useStyles({
     desktop: {
@@ -18,7 +17,7 @@ function DesktopLayout () {
   return (
     <Box style={styles.desktop}>
       <DesktopSideBar />
-      <Paragraph>Content ...</Paragraph>
+      {children}
     </Box>
   )
 }

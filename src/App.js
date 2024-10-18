@@ -5,6 +5,7 @@ import { MobileNavBar } from '@/application/MobileNavBar'
 import '@/infrastructure/i18n'
 import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
+import { SafeArea } from '@/infrastructure/components/SafeArea'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { registerRootComponent } from '@/infrastructure/hooks/useRegisterRootComponent'
@@ -33,22 +34,26 @@ export function App () {
 
   if (isDesktop) {
     return (
-      <Box style={styles.desktop}>
-        <DesktopSideBar />
-        <Paragraph>Content ...</Paragraph>
-      </Box>
+      <SafeArea>
+        <Box style={styles.desktop}>
+          <DesktopSideBar />
+          <Paragraph>Content ...</Paragraph>
+        </Box>
+      </SafeArea>
     )
   }
 
   if (isMobile) {
     return (
-      <Box style={styles.mobile}>
-        <Box style={styles.mobileContent}>
-          <MobileNavBar />
-          <Paragraph>Content ...</Paragraph>
+      <SafeArea>
+        <Box style={styles.mobile}>
+          <Box style={styles.mobileContent}>
+            <MobileNavBar />
+            <Paragraph>Content ...</Paragraph>
+          </Box>
+          <MobileButtonBar />
         </Box>
-        <MobileButtonBar />
-      </Box>
+      </SafeArea>
     )
   }
 }

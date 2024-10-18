@@ -6,22 +6,24 @@ import '@/infrastructure/i18n'
 import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
+import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { registerRootComponent } from '@/infrastructure/hooks/useRegisterRootComponent'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
 export function App () {
   const { isDesktop, isMobile } = useDeviceType()
+  const { screenHeight, screenWidth } = useDimensions()
   const styles = useStyles({
     desktop: {
       display: 'flex',
       flexDirection: 'row',
-      height: '100vh'
+      height: screenHeight
     },
     mobile: {
       display: 'flex',
       flexDirection: 'column',
-      height: '100vh',
-      width: '100vw',
+      height: screenHeight,
+      width: screenWidth,
       justifyContent: 'space-between'
     },
     mobileContent: {

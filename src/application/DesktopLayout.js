@@ -5,7 +5,7 @@ import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function DesktopLayout ({ children }) {
+function DesktopLayout () {
   const { screenHeight } = useDimensions()
   const styles = useStyles({
     desktop: {

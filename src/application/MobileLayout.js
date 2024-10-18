@@ -6,7 +6,7 @@ import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function MobileLayout ({ children }) {
+function MobileLayout () {
   const { screenHeight, screenWidth } = useDimensions()
   const styles = useStyles({
     mobile: {

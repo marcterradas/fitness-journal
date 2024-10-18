@@ -1,4 +1,4 @@
-import { Text } from 'react-native-web'
+import { Text } from 'react-native'
 
 function Paragraph ({ children, style }) {
   return (

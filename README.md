@@ -12,6 +12,12 @@ npm ci
 npm run phoenix
 ```
 
+### Remove dependencies and the package-lock.json and install again
+
+```
+npm run phoenix
+```
+
 ### Start expo server
 
 ```

@@ -1,3 +1,4 @@
 export default {
-  desktopBreakpoint: 1440
+  desktopBreakpoint: 1440,
+  initialRouteName: 'HomeScreen'
 }

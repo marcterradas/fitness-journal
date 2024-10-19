@@ -20,9 +20,9 @@ function Navigation () {
             name={screen.name}
             options={{ headerShown: false }}
           >
-            {() => (
+            {({ navigation }) => (
               <Suspense fallback={<Loader />}>
-                <DefaultLayout>
+                <DefaultLayout navigation={navigation}>
                   <screen.component />
                 </DefaultLayout>
               </Suspense>

@@ -2,7 +2,7 @@ import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function ButtonBar () {
+function ButtonBar ({ navigation }) {
   const style = useStyles({
     ButtonBar: {
       width: '100%',

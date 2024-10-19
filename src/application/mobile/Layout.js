@@ -5,7 +5,7 @@ import { Box } from '@/infrastructure/components/Box'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function Layout ({ children }) {
+function Layout ({ children, navigation }) {
   const { screenHeight, screenWidth } = useDimensions()
   const styles = useStyles({
     mobile: {
@@ -24,10 +24,10 @@ function Layout ({ children }) {
   return (
     <Box style={styles.mobile}>
       <Box style={styles.mobileContent}>
-        <NavBar />
+        <NavBar navigation={navigation} />
         {children}
       </Box>
-      <ButtonBar />
+      <ButtonBar navigation={navigation} />
     </Box>
   )
 }

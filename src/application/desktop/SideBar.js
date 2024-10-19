@@ -2,7 +2,7 @@ import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function SideBar () {
+function SideBar ({ navigation }) {
   const styles = useStyles({
     SideBar: {
       width: 200,

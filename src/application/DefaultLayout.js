@@ -1,8 +1,7 @@
-import { SafeAreaView } from 'react-native' // TODO move to infrastructure
-
 import { DesktopLayout } from '@/application/DesktopLayout'
 import { MobileLayout } from '@/application/MobileLayout'
 
+import { SafeArea } from '@/infrastructure/components/SafeArea'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 
 function DefaultLayout ({ children }) {
@@ -10,11 +9,11 @@ function DefaultLayout ({ children }) {
   const Layout = isMobile ? MobileLayout : DesktopLayout
 
   return (
-    <SafeAreaView>
+    <SafeArea>
       <Layout>
         {children}
       </Layout>
-    </SafeAreaView>
+    </SafeArea>
   )
 }
 

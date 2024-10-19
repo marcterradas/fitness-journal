@@ -1,10 +1,10 @@
 import '@/infrastructure/i18n'
-import { NavigationProvider } from '@/infrastructure/components/NavigationProvider'
 import { registerRootComponent } from '@/infrastructure/hooks/useRegisterRootComponent'
+import { Navigation } from '@/infrastructure/providers/Navigation'
 
 export function App () {
   return (
-    <NavigationProvider />
+    <Navigation />
   )
 }
 

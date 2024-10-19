@@ -10,7 +10,7 @@ import { routes } from '@/infrastructure/routes'
 
 const Stack = createNativeStackNavigator()
 
-function NavigationProvider () {
+function Navigation () {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName={config.initialRouteName}>
@@ -34,4 +34,4 @@ function NavigationProvider () {
   )
 }
 
-export { NavigationProvider }
+export { Navigation }

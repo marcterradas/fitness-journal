@@ -1,11 +1,11 @@
-import { MobileButtonBar } from '@/application/MobileButtonBar'
-import { MobileNavBar } from '@/application/MobileNavBar'
+import { ButtonBar } from '@/application/mobile/ButtonBar'
+import { NavBar } from '@/application/mobile/NavBar'
 
 import { Box } from '@/infrastructure/components/Box'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function MobileLayout ({ children }) {
+function Layout ({ children }) {
   const { screenHeight, screenWidth } = useDimensions()
   const styles = useStyles({
     mobile: {
@@ -24,12 +24,12 @@ function MobileLayout ({ children }) {
   return (
     <Box style={styles.mobile}>
       <Box style={styles.mobileContent}>
-        <MobileNavBar />
+        <NavBar />
         {children}
       </Box>
-      <MobileButtonBar />
+      <ButtonBar />
     </Box>
   )
 }
 
-export { MobileLayout }
+export { Layout }

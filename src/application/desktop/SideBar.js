@@ -2,9 +2,9 @@ import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function DesktopSideBar () {
+function SideBar () {
   const styles = useStyles({
-    desktopSideBar: {
+    SideBar: {
       width: 200,
       height: '100%',
       backgroundColor: 'lightgray'
@@ -12,10 +12,10 @@ function DesktopSideBar () {
   })
 
   return (
-    <Box style={styles.desktopSideBar}>
-      <Paragraph>DesktopSideBar ...</Paragraph>
+    <Box style={styles.SideBar}>
+      <Paragraph>SideBar ...</Paragraph>
     </Box>
   )
 }
 
-export { DesktopSideBar }
+export { SideBar }

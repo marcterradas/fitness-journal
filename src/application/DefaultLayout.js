@@ -1,5 +1,5 @@
-import { DesktopLayout } from '@/application/DesktopLayout'
-import { MobileLayout } from '@/application/MobileLayout'
+import { Layout as DesktopLayout } from '@/application/desktop/Layout'
+import { Layout as MobileLayout } from '@/application/mobile/Layout'
 
 import { SafeArea } from '@/infrastructure/components/SafeArea'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'

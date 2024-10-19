@@ -1,12 +1,12 @@
 import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 
-function ProfileScreen () {
+function Settings () {
   return (
     <Box>
-      <Paragraph>Profile Screen</Paragraph>
+      <Paragraph>Settings Screen</Paragraph>
     </Box>
   )
 }
 
-export default ProfileScreen
+export default Settings

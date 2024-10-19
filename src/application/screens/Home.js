@@ -1,12 +1,12 @@
 import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 
-function WorkoutScreen () {
+function Home () {
   return (
     <Box>
-      <Paragraph>Workout Screen</Paragraph>
+      <Paragraph>Home Screen</Paragraph>
     </Box>
   )
 }
 
-export default WorkoutScreen
+export default Home

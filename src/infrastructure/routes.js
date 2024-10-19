@@ -1,15 +1,15 @@
 import { lazy } from 'react'
 
-const HomeScreen = lazy(() => import('@/application/HomeScreen'))
-const ProfileScreen = lazy(() => import('@/application/ProfileScreen'))
-const SettingsScreen = lazy(() => import('@/application/SettingsScreen'))
-const WorkoutScreen = lazy(() => import('@/application/WorkoutScreen'))
+const Home = lazy(() => import('@/application/screens/Home'))
+const Profile = lazy(() => import('@/application/screens/Profile'))
+const Settings = lazy(() => import('@/application/screens/Settings'))
+const Workout = lazy(() => import('@/application/screens/Workout'))
 
 const routes = [
-  { name: 'HomeScreen', component: HomeScreen },
-  { name: 'ProfileScreen', component: ProfileScreen },
-  { name: 'SettingsScreen', component: SettingsScreen },
-  { name: 'WorkoutScreen', component: WorkoutScreen }
+  { name: 'Home', component: Home },
+  { name: 'Profile', component: Profile },
+  { name: 'Settings', component: Settings },
+  { name: 'Workout', component: Workout }
 ]
 
 export { routes }

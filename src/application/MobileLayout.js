@@ -13,7 +13,8 @@ function MobileLayout ({ children }) {
       flexDirection: 'column',
       height: screenHeight,
       width: screenWidth,
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      flex: 1
     },
     mobileContent: {
       flex: 1

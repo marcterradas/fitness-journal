@@ -1,28 +1,31 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { Suspense } from 'react'
 
 import { DefaultLayout } from '@/application/DefaultLayout'
-import { HomeScreen } from '@/application/HomeScreen'
+import { Loader } from '@/application/Loader'
+
+import config from '@/infrastructure/config'
+import { routes } from '@/infrastructure/routes'
+
+const Stack = createNativeStackNavigator()
 
 function NavigationProvider () {
-  const Stack = createNativeStackNavigator()
-
-  const screens = [
-    { name: 'HomeScreen', component: HomeScreen }
-  ]
-
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="HomeScreen">
-        {screens.map((screen, index) => (
+      <Stack.Navigator initialRouteName={config.initialRouteName}>
+        {routes.map((screen, index) => (
           <Stack.Screen
             key={index}
             name={screen.name}
+            options={{ headerShown: false }}
           >
             {() => (
-              <DefaultLayout>
-                <screen.component />
-              </DefaultLayout>
+              <Suspense fallback={<Loader />}>
+                <DefaultLayout>
+                  <screen.component />
+                </DefaultLayout>
+              </Suspense>
             )}
           </Stack.Screen>
         ))}

@@ -9,4 +9,4 @@ function SettingsScreen () {
   )
 }
 
-export { SettingsScreen }
+export default SettingsScreen

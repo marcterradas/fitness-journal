@@ -9,4 +9,4 @@ function WorkoutScreen () {
   )
 }
 
-export { WorkoutScreen }
+export default WorkoutScreen

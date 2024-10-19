@@ -10,9 +10,9 @@
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android --reset-cache",
-    "ios": "expo start --ios --reset-cache",
-    "web": "expo start --web --reset-cache",
+    "android": "expo start --android --reset-cache --port 8081",
+    "ios": "expo start --ios --reset-cache --port 8082",
+    "web": "expo start --web --reset-cache --port 8083",
     "phoenix": "rm -rf .expo node_modules && npm ci",
     "clean-install": "rm -rf .expo node_modules && rm -f package-lock.json && npm i",
     "lint": "eslint .",

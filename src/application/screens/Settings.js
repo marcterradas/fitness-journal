@@ -1,7 +1,7 @@
 import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 
-function Settings () {
+function Settings ({ navigation }) {
   return (
     <Box>
       <Paragraph>Settings Screen</Paragraph>

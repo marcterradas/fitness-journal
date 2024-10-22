@@ -23,7 +23,7 @@ function Navigation () {
             {({ navigation }) => (
               <Suspense fallback={<Loader />}>
                 <DefaultLayout navigation={navigation}>
-                  <screen.component />
+                  <screen.component navigation={navigation} />
                 </DefaultLayout>
               </Suspense>
             )}

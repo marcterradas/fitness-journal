@@ -6,6 +6,9 @@ import { useStyles } from '@/infrastructure/hooks/useStyles'
 function SideBar ({ navigation }) {
   const styles = useStyles({
     SideBar: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
       width: 200,
       height: '100%',
       backgroundColor: 'lightgray'

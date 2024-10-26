@@ -9,6 +9,7 @@ function SideBar ({ navigation }) {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      justifyContent: 'space-between',
       width: 200,
       height: '100%',
       backgroundColor: 'lightgray'
@@ -21,15 +22,17 @@ function SideBar ({ navigation }) {
 
   return (
     <Box style={styles.SideBar}>
-      <Link onPress={() => goTo('Home')}>
-        <Paragraph>Home</Paragraph>
-      </Link>
-      <Link onPress={() => goTo('Profile')}>
-        <Paragraph>Profile</Paragraph>
-      </Link>
-      <Link onPress={() => goTo('Workout')}>
-        <Paragraph>Workout</Paragraph>
-      </Link>
+      <Box>
+        <Link onPress={() => goTo('Home')}>
+          <Paragraph>Home</Paragraph>
+        </Link>
+        <Link onPress={() => goTo('Profile')}>
+          <Paragraph>Profile</Paragraph>
+        </Link>
+        <Link onPress={() => goTo('Workout')}>
+          <Paragraph>Workout</Paragraph>
+        </Link>
+      </Box>
       <Link onPress={() => goTo('Settings')}>
         <Paragraph>Settings</Paragraph>
       </Link>

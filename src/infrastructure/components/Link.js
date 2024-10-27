@@ -1,7 +1,7 @@
 import { Pressable } from 'react-native'
 
-function Link ({ children, onPress }) {
-  return <Pressable onPress={onPress}>{children}</Pressable>
+function Link ({ children, onPress, style }) {
+  return <Pressable style={style} onPress={onPress}>{children}</Pressable>
 }
 
 export { Link }

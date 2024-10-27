@@ -4,9 +4,9 @@ import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { colors } from '@/infrastructure/styles'
 
-function ButtonBar ({ navigation }) {
+function Bottom ({ navigation }) {
   const style = useStyles({
-    ButtonBar: {
+    Bottom: {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around',
@@ -22,7 +22,7 @@ function ButtonBar ({ navigation }) {
   }
 
   return (
-    <Box style={style.ButtonBar}>
+    <Box style={style.Bottom}>
       <Link onPress={() => goTo('Home')}>
         <Paragraph>Home</Paragraph>
       </Link>
@@ -39,4 +39,4 @@ function ButtonBar ({ navigation }) {
   )
 }
 
-export { ButtonBar }
+export { Bottom }

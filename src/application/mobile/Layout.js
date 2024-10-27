@@ -1,4 +1,4 @@
-import { ButtonBar } from '@/application/mobile/ButtonBar'
+import { Bottom } from '@/application/mobile/Bottom'
 import { NavBar } from '@/application/mobile/NavBar'
 
 import { Box } from '@/infrastructure/components/Box'
@@ -30,7 +30,7 @@ function Layout ({ children, navigation }) {
           {children}
         </Box>
       </Box>
-      <ButtonBar navigation={navigation} />
+      <Bottom navigation={navigation} />
     </Box>
   )
 }

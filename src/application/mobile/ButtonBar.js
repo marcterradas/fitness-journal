@@ -2,6 +2,7 @@ import { Box } from '@/infrastructure/components/Box'
 import { Link } from '@/infrastructure/components/Link'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
+import { colors } from '@/infrastructure/styles'
 
 function ButtonBar ({ navigation }) {
   const style = useStyles({
@@ -12,7 +13,7 @@ function ButtonBar ({ navigation }) {
       alignItems: 'center',
       width: '100%',
       height: 50,
-      backgroundColor: 'lightgray'
+      backgroundColor: colors.darkGray
     }
   })
 

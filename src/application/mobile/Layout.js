@@ -4,6 +4,7 @@ import { NavBar } from '@/application/mobile/NavBar'
 import { Box } from '@/infrastructure/components/Box'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
+import { spacerHalf } from '@/infrastructure/styles'
 
 function Layout ({ children, navigation }) {
   const { screenHeight, screenWidth } = useDimensions()
@@ -16,16 +17,18 @@ function Layout ({ children, navigation }) {
       justifyContent: 'space-between',
       flex: 1
     },
-    mobileContent: {
-      flex: 1
+    content: {
+      padding: spacerHalf
     }
   })
 
   return (
     <Box style={styles.mobile}>
-      <Box style={styles.mobileContent}>
+      <Box>
         <NavBar navigation={navigation} />
-        {children}
+        <Box style={styles.content}>
+          {children}
+        </Box>
       </Box>
       <ButtonBar navigation={navigation} />
     </Box>

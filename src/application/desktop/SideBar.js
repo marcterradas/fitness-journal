@@ -15,6 +15,9 @@ function SideBar ({ navigation }) {
       height: '100%',
       backgroundColor: 'lightgray',
       paddingVertical: spacer
+    },
+    link: {
+      marginBottom: spacer
     }
   })
 
@@ -25,10 +28,10 @@ function SideBar ({ navigation }) {
   return (
     <Box style={styles.SideBar}>
       <Box>
-        <Link onPress={() => goTo('Home')}>
+        <Link style={styles.link} onPress={() => goTo('Home')}>
           <Paragraph>Home</Paragraph>
         </Link>
-        <Link onPress={() => goTo('Profile')}>
+        <Link style={styles.link} onPress={() => goTo('Profile')}>
           <Paragraph>Profile</Paragraph>
         </Link>
         <Link onPress={() => goTo('Workout')}>

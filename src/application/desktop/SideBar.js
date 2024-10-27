@@ -2,6 +2,7 @@ import { Box } from '@/infrastructure/components/Box'
 import { Link } from '@/infrastructure/components/Link'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
+import { spacer } from '@/infrastructure/styles'
 
 function SideBar ({ navigation }) {
   const styles = useStyles({
@@ -12,7 +13,8 @@ function SideBar ({ navigation }) {
       justifyContent: 'space-between',
       width: 200,
       height: '100%',
-      backgroundColor: 'lightgray'
+      backgroundColor: 'lightgray',
+      paddingVertical: spacer
     }
   })
 

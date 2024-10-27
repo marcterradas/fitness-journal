@@ -1,5 +1,6 @@
 const baseSize = 16 // 1rem in pixels
 const ratio = 1.25
+const spacer = 16 // 1rem in pixels
 
 const fontSizes = {
   sm: baseSize / ratio,
@@ -17,4 +18,4 @@ const colors = {
   lightGray: '#E9ECEF'
 }
 
-export { fontSizes, colors }
+export { fontSizes, colors, spacer }

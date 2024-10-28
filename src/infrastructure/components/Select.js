@@ -3,6 +3,8 @@ import { Picker } from 'react-native'
 
 import { Box } from '@/infrastructure/components/Box'
 
+import { sortItems } from '@/domain/utils'
+
 /**
  * Select component for rendering a dropdown list.
  *
@@ -16,12 +18,7 @@ function Select ({ items = [], onSelectChange = () => {} }) {
   const [selectedValue, setSelectedValue] = useState(placeholder)
 
   const sortedItems = useMemo(() => {
-    // TODO move this logic to domain folder.
-    return [...items].sort((a, b) => {
-      if (a.value === selectedValue) return -1
-      if (b.value === selectedValue) return 1
-      return a.value.localeCompare(b.value)
-    })
+    return sortItems(items, selectedValue)
   }, [selectedValue, items])
 
   function handleSelect (itemValue) {

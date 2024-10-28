@@ -6,7 +6,10 @@
  * @param {string} params.selectedValue - The value of the selected item to place first.
  * @returns {Array<{label: string, value: string}>} - The sorted array of items.
  */
-function sortItems ({ items, selectedValue }) {
+function sortItems ({ items = [], selectedValue = false } = {}) {
+  if (!items) return []
+  if (!selectedValue) return items
+
   return [...items].sort((a, b) => {
     const valueA = a.value.toString().toLowerCase()
     const valueB = b.value.toString().toLowerCase()

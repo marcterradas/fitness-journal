@@ -18,7 +18,7 @@ function Select ({ items = [], onSelectChange = () => {} }) {
   const [selectedValue, setSelectedValue] = useState(placeholder)
 
   const sortedItems = useMemo(() => {
-    return sortItems(items, selectedValue)
+    return sortItems({ items, selectedValue })
   }, [selectedValue, items])
 
   function handleSelect (itemValue) {

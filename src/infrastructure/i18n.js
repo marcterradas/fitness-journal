@@ -1,5 +1,5 @@
 import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
+import { initReactI18next, useTranslation } from 'react-i18next'
 
 import cat from '@/infrastructure/translations/cat.json'
 import en from '@/infrastructure/translations/en.json'
@@ -14,4 +14,14 @@ i18n
     compatibilityJSON: 'v3'
   })
 
+function changeLanguage (language) {
+  try {
+    i18n.changeLanguage(language)
+  } catch (error) {
+    // TODO: Handle error
+  }
+}
+
 export default { i18n }
+
+export { changeLanguage, useTranslation }

@@ -2,9 +2,12 @@ import { Box } from '@/infrastructure/components/Box'
 import { Link } from '@/infrastructure/components/Link'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
+import { useTranslation } from '@/infrastructure/i18n'
 import { colors } from '@/infrastructure/styles'
 
 function Bottom ({ navigation }) {
+  const { t } = useTranslation()
+
   const style = useStyles({
     Bottom: {
       display: 'flex',
@@ -24,16 +27,16 @@ function Bottom ({ navigation }) {
   return (
     <Box style={style.Bottom}>
       <Link onPress={() => goTo('Home')}>
-        <Paragraph>Home</Paragraph>
+        <Paragraph>{t('navigation.label.home')}</Paragraph>
       </Link>
       <Link onPress={() => goTo('Profile')}>
-        <Paragraph>Profile</Paragraph>
+        <Paragraph>{t('navigation.label.profile')}</Paragraph>
       </Link>
       <Link onPress={() => goTo('Workout')}>
-        <Paragraph>Workout</Paragraph>
+        <Paragraph>{t('navigation.label.workouts')}</Paragraph>
       </Link>
       <Link onPress={() => goTo('Settings')}>
-        <Paragraph>Settings</Paragraph>
+        <Paragraph>{t('navigation.label.settings')}</Paragraph>
       </Link>
     </Box>
   )

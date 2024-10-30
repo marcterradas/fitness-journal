@@ -1,5 +1,8 @@
 {
     "translation": {
-        "test": "Hello World"
+        "navigation.label.home": "Home",
+        "navigation.label.profile": "Profile",
+        "navigation.label.settings": "Settings",
+        "navigation.label.workouts": "Workouts"
     }
 }

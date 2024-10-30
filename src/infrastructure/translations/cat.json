@@ -1,5 +1,8 @@
 {
     "translation": {
-        "test": "Hola Món"
+        "navigation.label.home": "Inici",
+        "navigation.label.profile": "Perfil",
+        "navigation.label.settings": "Configuració",
+        "navigation.label.workouts": "Entrenaments"
     }
 }

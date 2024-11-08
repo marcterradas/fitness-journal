@@ -11,7 +11,6 @@
     "apps/*"
     ],
     "scripts": {
-        "app:install": "cd ./apps/app && npm run clean-install",
         "app:android": "cd ./apps/app && npm run android",
         "app:ios": "cd ./apps/app && npm run ios",
         "app:web": "cd ./apps/app && npm run web"

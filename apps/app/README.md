@@ -1,4 +1,4 @@
-<h1 align='center'>Fitness Journal</h1>
+<h1 align='center'>Fitness Journal - APP</h1>
 
 ### Intall dependencies
 

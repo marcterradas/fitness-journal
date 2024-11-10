@@ -1,0 +1,10 @@
+{
+    "name": "fitness-journal-api",
+    "version": "1.0.0",
+    "main": "src/main.js",
+    "type": "module",
+    "engines": {
+        "node": ">=18.20.0",
+        "npm": ">=10.7.0"
+    }
+}

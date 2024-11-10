@@ -1,9 +1,9 @@
-// https://docs.expo.dev/guides/using-eslint/
 module.exports = {
-  extends: ['expo', 'standard'],
+  extends: ['../../.eslintrc.cjs'],
   plugins: ['react'],
   rules: {
-    'import/no-unresolved': 'off', // required for importing with the alias.
+    'react/jsx-indent': ['error', 2],
+    'react/jsx-indent-props': ['error', 2],
     'import/order': [
       'error',
       {
@@ -33,11 +33,6 @@ module.exports = {
         'newlines-between': 'always',
         alphabetize: { order: 'asc', caseInsensitive: true }
       }
-    ],
-    'no-param-reassign': ['error', { props: false }],
-    'no-console': 'error',
-    indent: ['error', 2],
-    'react/jsx-indent': ['error', 2],
-    'react/jsx-indent-props': ['error', 2]
+    ]
   }
 }

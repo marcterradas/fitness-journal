@@ -23,3 +23,9 @@ app:run ios
 ```
 app:run web
 ```
+
+### Start api
+
+```
+api:run start
+```

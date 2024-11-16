@@ -1,10 +1,25 @@
 {
-    "name": "fitness-journal-api",
-    "version": "1.0.0",
-    "main": "src/main.js",
-    "type": "module",
-    "engines": {
-        "node": ">=18.20.0",
-        "npm": ">=10.7.0"
-    }
+  "name": "api",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with Fastify-CLI.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.js",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "fastify-plugin": "^5.0.0",
+    "@fastify/autoload": "^6.0.0",
+    "@fastify/sensible": "^6.0.0",
+    "fastify-cli": "^7.0.1"
+  },
+  "devDependencies": {}
 }

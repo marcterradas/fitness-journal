@@ -13,7 +13,8 @@
     "scripts": {
         "app:android": "cd ./apps/app && npm run android",
         "app:ios": "cd ./apps/app && npm run ios",
-        "app:web": "cd ./apps/app && npm run web"
+        "app:web": "cd ./apps/app && npm run web",
+        "api:start": "cd ./apps/api && npm start"
     },
     "devDependencies": {
       "eslint": "^8.57.0",

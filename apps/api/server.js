@@ -8,7 +8,7 @@ fastify.get('/', function (request, reply) {
   reply.send({ hello: 'world' })
 })
 
-const start = async () => {
+async function start () {
   try {
     await fastify.listen({ port: 3000 })
   } catch (err) {
@@ -16,4 +16,5 @@ const start = async () => {
     process.exit(1)
   }
 }
+
 start()

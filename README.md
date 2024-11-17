@@ -9,23 +9,23 @@ npm ci
 ### Start app on android
 
 ```
-app:run android
+npm app:run android
 ```
 
 ### Start app on ios
 
 ```
-app:run ios
+npm app:run ios
 ```
 
 ### Start app on web
 
 ```
-app:run web
+npm app:run web
 ```
 
 ### Start api
 
 ```
-api:run start
+npm api:run start
 ```

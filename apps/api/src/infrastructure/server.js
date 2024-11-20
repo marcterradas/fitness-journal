@@ -1,13 +1,14 @@
 import Fastify from 'fastify'
 
+import config from './config.js'
+
 const server = Fastify({
   logger: true
 })
 
 async function start () {
   try {
-    // TODO: move port to config file
-    await server.listen({ port: 3000 })
+    await server.listen({ port: config.port })
   } catch (err) {
     server.log.error(err)
     process.exit(1)

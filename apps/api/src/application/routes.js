@@ -1,4 +1,4 @@
-import { helloWorld } from '../domain/test.js'
+import { login } from '../domain/auth.js'
 import { server } from '../infrastructure/server.js'
 
-server.get('/', {}, helloWorld)
+server.post('/login', {}, login)

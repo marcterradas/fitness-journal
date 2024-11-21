@@ -1,7 +1,4 @@
-import { server, start } from './infrastructure/server.js'
-
-server.get('/', function (request, reply) {
-  reply.send({ hello: 'world' })
-})
+import { start } from './infrastructure/server.js'
+import './infrastructure/routes.js'
 
 start()

@@ -5,3 +5,8 @@
 ```
 npm run start
 ```
+
+### E2E tests
+```
+npm run test
+```

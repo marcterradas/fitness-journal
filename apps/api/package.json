@@ -8,7 +8,7 @@
         "npm": ">=10.7.0"
     },
     "scripts": {
-        "start": "cd ./src && node main.js"
+        "start": "cd ./src && node --watch main.js"
     },
     "dependencies": {
         "@fastify/mongodb": "^9.0.1",

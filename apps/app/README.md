@@ -42,8 +42,8 @@ npm run android
 npm run ios
 ```
 
-### Run unit test
+### Run unit tests
 
 ```
-pnpm run test:unit
+npm run test
 ```

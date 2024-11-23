@@ -9,11 +9,10 @@
     "npm": ">=10.7.0"
   },
   "scripts": {
-    "start": "expo start",
     "android": "expo start --android --reset-cache --port 8081",
     "ios": "expo start --ios --reset-cache --port 8082",
     "web": "expo start --web --reset-cache --port 8083",
-    "test:unit": "vitest"
+    "test": "vitest"
   },
   "dependencies": {
     "@expo/metro-runtime": "3.2.3",

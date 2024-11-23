@@ -24,6 +24,12 @@ npm app:run ios
 npm app:run web
 ```
 
+### Run app tests
+
+```
+npm app:run web
+```
+
 ### Start api
 
 ```

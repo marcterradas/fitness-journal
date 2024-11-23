@@ -16,6 +16,7 @@
         "app:web": "cd ./apps/app && npm run web",
         "app:test": "cd ./apps/app && npm run test",
         "api:start": "cd ./apps/api && npm start",
+        "api:test": "cd ./apps/api && npm test",
         "lint": "eslint ."
     },
     "devDependencies": {
@@ -23,6 +24,7 @@
       "eslint-config-standard": "^17.1.0",
       "eslint-plugin-import": "^2.30.0",
       "eslint-plugin-n": "^16.6.2",
-      "eslint-plugin-promise": "^6.6.0"
+      "eslint-plugin-promise": "^6.6.0",
+      "vitest": "^2.0.5"
     }
 }

@@ -1,11 +1,13 @@
+import { encrypt, sanitize } from './utils'
+
 async function login (request, reply) {
-  const username = request.body?.username
-  const password = request.body?.password
+  const username = sanitize(request.body?.username)
+  const password = sanitize(request.body?.password)
 
   if (!username) reply.code(400).send({ message: 'username is required' })
   if (!password) reply.code(400).send({ message: 'password is required' })
 
-  // TODO:
+  const encryptedPassword = encrypt(password)
 
   reply.code(200).send({})
 }

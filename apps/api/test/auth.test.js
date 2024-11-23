@@ -4,19 +4,21 @@ import { server } from '../src/infrastructure/server.js'
 import '../src/application/routes.js'
 
 describe('login', () => {
-  it('login without body', async () => {
-    const response = await server.inject({ method: 'POST', url: '/login' })
-    expect(response.statusCode).toBe(400)
-  })
-  it('login without body', async () => {
-    const response = await server.inject({ method: 'POST', url: '/login', payload: {} })
-    expect(response.statusCode).toBe(400)
-  })
-})
+  const method = 'POST'
+  const url = '/login'
 
-describe('login', () => {
+  it('login without body', async () => {
+    const response = await server.inject({ method, url })
+    expect(response.statusCode).toBe(400)
+  })
+
+  it('login without body', async () => {
+    const response = await server.inject({ method, url, payload: {} })
+    expect(response.statusCode).toBe(400)
+  })
+
   it('login with body', async () => {
-    const response = await server.inject({ method: 'POST', url: '/login', payload: { username: 'test', password: 'test' } })
+    const response = await server.inject({ method, url, payload: { username: 'test', password: 'test' } })
     expect(response.statusCode).toBe(200)
   })
 })

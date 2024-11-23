@@ -42,12 +42,6 @@ npm run android
 npm run ios
 ```
 
-### Lint code
-
-```
-npm run lint
-```
-
 ### Run unit test
 
 ```

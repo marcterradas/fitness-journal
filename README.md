@@ -29,3 +29,9 @@ npm app:run web
 ```
 npm api:run start
 ```
+
+### Lint code
+
+```
+npm run lint
+```

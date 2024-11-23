@@ -14,7 +14,8 @@
         "app:android": "cd ./apps/app && npm run android",
         "app:ios": "cd ./apps/app && npm run ios",
         "app:web": "cd ./apps/app && npm run web",
-        "api:start": "cd ./apps/api && npm start"
+        "api:start": "cd ./apps/api && npm start",
+        "lint": "eslint ."
     },
     "devDependencies": {
       "eslint": "^8.57.0",

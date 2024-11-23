@@ -27,13 +27,19 @@ npm app:run web
 ### Run app tests
 
 ```
-npm app:run web
+npm app:run test
 ```
 
 ### Start api
 
 ```
 npm api:run start
+```
+
+### Run api test
+
+```
+npm api:run test
 ```
 
 ### Lint code

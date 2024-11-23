@@ -20,4 +20,25 @@ function encrypt (string = '') {
   return encrypted
 }
 
-export { encrypt }
+/**
+ * Sanitizes a string by removing potentially harmful characters.
+ *
+ * @param {string} string - The string to sanitize.
+ * @returns {string} The sanitized string.
+ */
+function sanitize (string = '') {
+  return string.replace(/[&<>"'`=/]/g, function (char) {
+    return {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      '`': '&#x60;',
+      '=': '&#x3D;',
+      '/': '&#x2F;'
+    }[char]
+  })
+}
+
+export { encrypt, sanitize }

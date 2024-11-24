@@ -1,4 +1,4 @@
-import { encrypt, sanitize } from './utils'
+import { encrypt, sanitize } from './utils.js'
 
 async function login (request, reply) {
   const username = sanitize(request.body?.username)

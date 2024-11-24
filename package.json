@@ -19,9 +19,6 @@
         "api:test": "cd ./apps/api && npm test",
         "lint": "eslint ."
     },
-    "dependencies": {
-        "dotenv": "^16.4.5"
-    },
     "devDependencies": {
         "eslint": "^8.57.0",
         "eslint-config-standard": "^17.1.0",

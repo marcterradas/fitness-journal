@@ -3,7 +3,7 @@ import Fastify from 'fastify'
 import config from './config.js'
 
 const server = Fastify({
-  logger: false // TODO: activate for production
+  logger: process.env.NODE_ENV === 'production'
 })
 
 async function start () {

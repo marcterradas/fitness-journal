@@ -8,7 +8,7 @@
         "npm": ">=10.7.0"
     },
     "scripts": {
-        "start": "cd ./src && node --watch main.js",
+        "start": "cd ./src && node --watch --env-file=../.env main.js",
         "test": "vitest"
     },
     "dependencies": {

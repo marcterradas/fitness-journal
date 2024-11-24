@@ -4,11 +4,11 @@
     "type": "module",
     "private": true,
     "engines": {
-      "node": ">=18.20.0",
-      "npm": ">=10.7.0"
+        "node": ">=18.20.0",
+        "npm": ">=10.7.0"
     },
     "workspaces": [
-    "apps/*"
+        "apps/*"
     ],
     "scripts": {
         "app:android": "cd ./apps/app && npm run android",
@@ -19,12 +19,15 @@
         "api:test": "cd ./apps/api && npm test",
         "lint": "eslint ."
     },
+    "dependencies": {
+        "dotenv": "^16.4.5"
+    },
     "devDependencies": {
-      "eslint": "^8.57.0",
-      "eslint-config-standard": "^17.1.0",
-      "eslint-plugin-import": "^2.30.0",
-      "eslint-plugin-n": "^16.6.2",
-      "eslint-plugin-promise": "^6.6.0",
-      "vitest": "^2.0.5"
+        "eslint": "^8.57.0",
+        "eslint-config-standard": "^17.1.0",
+        "eslint-plugin-import": "^2.30.0",
+        "eslint-plugin-n": "^16.6.2",
+        "eslint-plugin-promise": "^6.6.0",
+        "vitest": "^2.0.5"
     }
 }

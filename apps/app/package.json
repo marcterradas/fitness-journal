@@ -5,10 +5,11 @@
   "type": "module",
   "private": true,
   "engines": {
-    "node": ">=20.18.1",
-    "npm": ">=10.8.2"
+    "node": ">=22.11.0",
+    "npm": ">=10.9.0"
   },
   "scripts": {
+    "start": "expo start --reset-cache --port 8080",
     "android": "expo start --android --reset-cache --port 8081",
     "ios": "expo start --ios --reset-cache --port 8082",
     "web": "expo start --web --reset-cache --port 8083",

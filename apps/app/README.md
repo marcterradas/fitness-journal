@@ -21,7 +21,7 @@ npm run clean-install
 ### Start expo server
 
 ```
-npm run expo
+npm run start
 ```
 
 ### Compiles and hot-reloads for development (Web)

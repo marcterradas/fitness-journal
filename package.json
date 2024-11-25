@@ -4,13 +4,14 @@
     "type": "module",
     "private": true,
     "engines": {
-        "node": ">=20.18.1",
-        "npm": ">=10.8.2"
+        "node": ">=22.11.0",
+        "npm": ">=10.9.0"
     },
     "workspaces": [
         "apps/*"
     ],
     "scripts": {
+        "app:start": "cd ./apps/app && npm run start",
         "app:android": "cd ./apps/app && npm run android",
         "app:ios": "cd ./apps/app && npm run ios",
         "app:web": "cd ./apps/app && npm run web",

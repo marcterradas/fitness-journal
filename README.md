@@ -6,6 +6,11 @@
 npm ci
 ```
 
+### Start app
+```
+npm app:run start
+```
+
 ### Start app on android
 
 ```

@@ -47,6 +47,12 @@ npm api:run start
 npm api:run test
 ```
 
+### test code
+
+```
+npm run test
+```
+
 ### Lint code
 
 ```

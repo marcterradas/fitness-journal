@@ -9,7 +9,7 @@
     },
     "scripts": {
         "start": "cd ./src && node --watch --env-file=../.env main.js",
-        "test": "vitest"
+        "test": "vitest --run"
     },
     "dependencies": {
         "fastify": "^5.1.0",

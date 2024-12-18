@@ -9,6 +9,9 @@ async function login (request, reply) {
 
   const encryptedPassword = encrypt(password)
 
+  // TODO:
+  console.log(encryptedPassword)
+
   reply.code(200).send({})
 }
 

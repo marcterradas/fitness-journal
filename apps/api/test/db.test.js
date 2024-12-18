@@ -8,8 +8,7 @@ describe('test database connection', () => {
     try {
       await client.connect()
       const response = await client.db(config.database).command({ ping: 1 })
-      console.log(response)
-      expect(true).toBe(true)
+      expect(response).toEqual({ ok: 1 })
     } catch (err) {
       console.error(err)
     } finally {

@@ -3,7 +3,7 @@ import Fastify from 'fastify'
 import config from './config.js'
 
 const server = Fastify({
-  logger: config.enviorment === 'production'
+  logger: config.environment === 'production'
 })
 
 async function start () {

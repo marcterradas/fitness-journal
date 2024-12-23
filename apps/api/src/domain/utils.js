@@ -5,6 +5,7 @@
  * @returns {string} The Base64 encoded string.
  */
 function encrypt (string = '') {
+  // TODO: Implement encryption.
   return Buffer.from(string).toString('base64')
 }
 

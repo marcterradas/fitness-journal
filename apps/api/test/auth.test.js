@@ -28,6 +28,11 @@ describe('login', () => {
     expect(response.statusCode).toBe(400)
   })
 
+  it('login wrong credentials', async () => {
+    const response = await server.inject({ method, url, payload: { username: 'test', password: 'test' } })
+    expect(response.statusCode).toBe(404)
+  })
+
   it('login correct credentials', async () => {
     const response = await server.inject({ method, url, payload: { username: config.testUserUsername, password: config.testUserPassword } })
     expect(response.statusCode).toBe(200)

@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Suspense } from 'react'
 
-import { DefaultLayout } from '@/application/DefaultLayout'
+import { DefaultLayout } from '@/application/layouts/DefaultLayout'
 import { Loader } from '@/application/Loader'
 
 import config from '@/infrastructure/config'

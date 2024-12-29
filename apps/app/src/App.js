@@ -18,6 +18,7 @@ export function App () {
     )
   }
 
+  // User is logged in, show the navigation.
   return (
     <Navigation />
   )

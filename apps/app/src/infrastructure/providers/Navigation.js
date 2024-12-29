@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Suspense } from 'react'
 
-import { DefaultLayout } from '@/application/layouts/DefaultLayout'
+import { Default as Layout } from '@/application/layouts/Default'
 import { Loader } from '@/application/Loader'
 
 import config from '@/infrastructure/config'
@@ -22,9 +22,9 @@ function Navigation () {
           >
             {({ navigation }) => (
               <Suspense fallback={<Loader />}>
-                <DefaultLayout navigation={navigation}>
+                <Layout navigation={navigation}>
                   <screen.component navigation={navigation} />
-                </DefaultLayout>
+                </Layout>
               </Suspense>
             )}
           </Stack.Screen>

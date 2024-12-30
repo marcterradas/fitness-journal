@@ -1,3 +1,4 @@
+import cors from '@fastify/cors'
 import Fastify from 'fastify'
 
 import config from './config.js'
@@ -6,6 +7,8 @@ import { client } from './database.js'
 const server = Fastify({
   logger: config.environment === 'production'
 })
+
+server.register(cors)
 
 async function start () {
   try {

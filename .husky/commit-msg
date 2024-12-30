@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+commit_msg_file=$1
+commit_msg=$(cat $commit_msg_file)
+
+if ! echo "$commit_msg" | grep -qE '^[A-Z].*\.$'; then
+  echo "Error: Commit message must start with a capital letter and end with a period."
+  exit 1
+fi

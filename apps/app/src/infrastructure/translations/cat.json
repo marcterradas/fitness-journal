@@ -1,10 +1,10 @@
 {
     "translation": {
+        "login.label.email": "Correu electrònic",
+        "login.label.password": "Contrasenya",
         "navigation.label.home": "Inici",
         "navigation.label.profile": "Perfil",
         "navigation.label.settings": "Configuració",
-        "navigation.label.workouts": "Entrenaments",
-        "login.label.email": "Correu electrònic",
-        "login.label.password": "Contrasenya"
+        "navigation.label.workouts": "Entrenaments"
     }
 }

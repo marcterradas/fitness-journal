@@ -3,6 +3,8 @@
         "navigation.label.home": "Home",
         "navigation.label.profile": "Profile",
         "navigation.label.settings": "Settings",
-        "navigation.label.workouts": "Workouts"
+        "navigation.label.workouts": "Workouts",
+        "login.label.email": "Email",
+        "login.label.password": "Password"
     }
 }

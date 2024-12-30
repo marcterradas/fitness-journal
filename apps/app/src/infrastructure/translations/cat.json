@@ -3,6 +3,8 @@
         "navigation.label.home": "Inici",
         "navigation.label.profile": "Perfil",
         "navigation.label.settings": "Configuració",
-        "navigation.label.workouts": "Entrenaments"
+        "navigation.label.workouts": "Entrenaments",
+        "login.label.email": "Correu electrònic",
+        "login.label.password": "Contrasenya"
     }
 }

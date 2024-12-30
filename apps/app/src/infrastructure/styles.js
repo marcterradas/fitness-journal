@@ -1,6 +1,6 @@
-const baseSize = 16 // 1rem in pixels
+const baseSize = 16 // 1rem in pixels.
 const ratio = 1.25
-const spacer = 16 // 1rem in pixels
+const spacer = 16 // 1rem in pixels.
 const spacerHalf = spacer / 2
 
 const fontSizes = {

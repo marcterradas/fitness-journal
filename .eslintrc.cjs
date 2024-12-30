@@ -3,7 +3,7 @@ module.exports = {
   extends: ['expo', 'standard'],
   plugins: ['react'],
   rules: {
-    'import/no-unresolved': 'off', // required for importing with the alias.
+    'import/no-unresolved': 'off', // Required for importing with the alias.
     'import/order': [
       'error',
       {

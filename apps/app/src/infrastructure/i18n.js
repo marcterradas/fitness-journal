@@ -18,7 +18,7 @@ function changeLanguage (language) {
   try {
     i18n.changeLanguage(language)
   } catch (error) {
-    // TODO: Handle error
+    // TODO: Handle error.
   }
 }
 

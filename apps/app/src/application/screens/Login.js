@@ -11,7 +11,7 @@ import { spacer } from '@/infrastructure/styles'
 function Login ({ navigation }) {
   const { t } = useTranslation()
   const { isMobile } = useDeviceType()
-  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const styles = useStyles({
@@ -34,8 +34,8 @@ function Login ({ navigation }) {
     <Box style={styles.Login}>
       <Input
         placeholder={t('login.label.email')}
-        value={username}
-        onChangeText={setUsername}
+        value={email}
+        onChangeText={setEmail}
         autoFocus
         textContentType='emailAddress'
       />

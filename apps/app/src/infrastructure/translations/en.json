@@ -1,8 +1,8 @@
 {
     "translation": {
-        "login.label.email": "Email",
         "login.label.login": "Login",
         "login.label.password": "Password",
+        "login.label.username": "Username",
         "navigation.label.home": "Home",
         "navigation.label.profile": "Profile",
         "navigation.label.settings": "Settings",

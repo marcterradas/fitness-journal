@@ -1,8 +1,8 @@
 {
     "translation": {
-        "login.label.email": "Correo electrónico",
         "login.label.login": "Iniciar sesión",
         "login.label.password": "Contraseña",
+        "login.label.username": "Nombre de usuario",
         "navigation.label.home": "Inicio",
         "navigation.label.profile": "Perfil",
         "navigation.label.settings": "Configuración",

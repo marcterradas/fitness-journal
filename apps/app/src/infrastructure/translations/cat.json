@@ -1,8 +1,8 @@
 {
     "translation": {
-        "login.label.email": "Correu electrònic",
         "login.label.login": "Iniciar sessió",
         "login.label.password": "Contrasenya",
+        "login.label.username": "Nom d'usuari",
         "navigation.label.home": "Inici",
         "navigation.label.profile": "Perfil",
         "navigation.label.settings": "Configuració",

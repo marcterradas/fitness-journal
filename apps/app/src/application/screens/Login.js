@@ -35,11 +35,11 @@ function Login ({ navigation }) {
   return (
     <Box style={styles.Login}>
       <Input
-        placeholder={t('login.label.email')}
+        placeholder={t('login.label.username')}
         value={username}
         onChangeText={setUsername}
         autoFocus
-        textContentType='emailAddress'
+        textContentType='username'
       />
       <Input
         placeholder={t('login.label.password')}

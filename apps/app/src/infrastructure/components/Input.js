@@ -9,6 +9,7 @@ function Input (props) {
 
   const style = useStyles({
     input: {
+      width: '100%',
       fontSize: isMobile ? fontSizes.sm : fontSizes.md,
       padding: spacerHalf,
       borderWidth,

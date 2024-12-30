@@ -6,18 +6,6 @@
 npm ci
 ```
 
-### Remove dependencies and install again.
-
-```
-npm run phoenix
-```
-
-### Remove dependencies and the package-lock.json and install again.
-
-```
-npm run clean-install
-```
-
 ### Start expo server.
 
 ```

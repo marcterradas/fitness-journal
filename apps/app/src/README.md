@@ -15,3 +15,38 @@ This folder contains the infrastructure-related code.
 ## Assets
 
 This folder contains the assets of the application.
+
+### Start app.
+```
+npm run start
+```
+
+### Start app on android.
+
+```
+npm run android
+```
+
+### Start app on ios.
+
+```
+npm run ios
+```
+
+### Start app on web.
+
+```
+npm run web
+```
+
+### Run app tests.
+
+```
+npm run test
+```
+
+### Sort app translations keys.
+
+```
+npm run sort-json
+```

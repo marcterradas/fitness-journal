@@ -8,49 +8,49 @@ npm ci
 
 ### Start app.
 ```
-npm app:run start
+npm run app:start
 ```
 
 ### Start app on android.
 
 ```
-npm app:run android
+npm run app:android
 ```
 
 ### Start app on ios.
 
 ```
-npm app:run ios
+npm run app:ios
 ```
 
 ### Start app on web.
 
 ```
-npm app:run web
+npm run app:web
 ```
 
 ### Run app tests.
 
 ```
-npm app:run test
+npm run app:test
 ```
 
 ### Sort app translations keys.
 
 ```
-app:sort-json
+npm run app:sort-json
 ```
 
 ### Start api.
 
 ```
-npm api:run start
+npm run api:start
 ```
 
 ### Run api test.
 
 ```
-npm api:run test
+npm run api:test
 ```
 
 ### test code.

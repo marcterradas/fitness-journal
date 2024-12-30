@@ -6,12 +6,13 @@ import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useState } from '@/infrastructure/hooks/useState'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { useTranslation } from '@/infrastructure/i18n'
+import { login } from '@/infrastructure/service/api'
 import { spacer } from '@/infrastructure/styles'
 
 function Login ({ navigation }) {
   const { t } = useTranslation()
   const { isMobile } = useDeviceType()
-  const [email, setEmail] = useState('')
+  const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
   const styles = useStyles({
@@ -26,7 +27,8 @@ function Login ({ navigation }) {
     }
   })
 
-  function login () {
+  function doLogin () {
+    login({ username, password })
     // TODO: Implement login.
   }
 
@@ -34,8 +36,8 @@ function Login ({ navigation }) {
     <Box style={styles.Login}>
       <Input
         placeholder={t('login.label.email')}
-        value={email}
-        onChangeText={setEmail}
+        value={username}
+        onChangeText={setUsername}
         autoFocus
         textContentType='emailAddress'
       />
@@ -46,7 +48,7 @@ function Login ({ navigation }) {
         textContentType='password'
         secureTextEntry
       />
-      <Button onPress={login}>
+      <Button onPress={doLogin}>
         <Paragraph>
           {t('login.label.login')}
         </Paragraph>

@@ -1,5 +1,7 @@
 import { Box } from '@/infrastructure/components/Box'
+import { Button } from '@/infrastructure/components/Button'
 import { Input } from '@/infrastructure/components/Input'
+import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useState } from '@/infrastructure/hooks/useState'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
@@ -24,6 +26,10 @@ function Login ({ navigation }) {
     }
   })
 
+  function login () {
+    // TODO: Implement login.
+  }
+
   return (
     <Box style={styles.Login}>
       <Input
@@ -40,6 +46,11 @@ function Login ({ navigation }) {
         textContentType='password'
         secureTextEntry
       />
+      <Button onPress={login}>
+        <Paragraph>
+          {t('login.label.login')}
+        </Paragraph>
+      </Button>
     </Box>
   )
 }

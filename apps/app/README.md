@@ -1,11 +1,5 @@
 <h1 align='center'>Fitness Journal - APP</h1>
 
-### Install dependencies.
-
-```
-npm ci
-```
-
 ### Start expo server.
 
 ```

@@ -1,59 +1,65 @@
 <h1 align='center'>Fitness Journal</h1>
 
-### Intall dependencies
+### Install dependencies.
 
 ```
 npm ci
 ```
 
-### Start app
+### Start app.
 ```
 npm app:run start
 ```
 
-### Start app on android
+### Start app on android.
 
 ```
 npm app:run android
 ```
 
-### Start app on ios
+### Start app on ios.
 
 ```
 npm app:run ios
 ```
 
-### Start app on web
+### Start app on web.
 
 ```
 npm app:run web
 ```
 
-### Run app tests
+### Run app tests.
 
 ```
 npm app:run test
 ```
 
-### Start api
+### Sort app translations keys.
+
+```
+app:sort-json
+```
+
+### Start api.
 
 ```
 npm api:run start
 ```
 
-### Run api test
+### Run api test.
 
 ```
 npm api:run test
 ```
 
-### test code
+### test code.
 
 ```
 npm run test
 ```
 
-### Lint code
+### Lint code.
 
 ```
 npm run lint

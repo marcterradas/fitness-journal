@@ -1,2 +1,3 @@
+npm run app:sort-json
 npm run test
 npm run lint

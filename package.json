@@ -16,6 +16,7 @@
     "app:ios": "cd ./apps/app && npm run ios",
     "app:web": "cd ./apps/app && npm run web",
     "app:test": "cd ./apps/app && npm run test",
+    "app:sort-json": "cd ./apps/app && npm run sort-json",
     "api:start": "cd ./apps/api && npm start",
     "api:test": "cd ./apps/api && npm test",
     "lint": "eslint .",

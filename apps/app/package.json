@@ -13,7 +13,8 @@
     "android": "expo start --android --reset-cache --port 8081",
     "ios": "expo start --ios --reset-cache --port 8082",
     "web": "expo start --web --reset-cache --port 8083",
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "sort-json": "sort-json ./src/infrastructure/translations/*.json"
   },
   "dependencies": {
     "@expo/metro-runtime": "3.2.3",
@@ -34,6 +35,7 @@
     "@babel/core": "^7.20.0",
     "babel-plugin-module-resolver": "^5.0.2",
     "eslint-config-expo": "^7.1.2",
-    "eslint-plugin-react": "^7.37.1"
+    "eslint-plugin-react": "^7.37.1",
+    "sort-json": "^2.0.1"
   }
 }

@@ -3,6 +3,7 @@ import { Button } from '@/infrastructure/components/Button'
 import { Input } from '@/infrastructure/components/Input'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
+import { useMemo } from '@/infrastructure/hooks/useMemo'
 import { useState } from '@/infrastructure/hooks/useState'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { useTranslation } from '@/infrastructure/i18n'
@@ -14,6 +15,7 @@ function Login ({ navigation }) {
   const { isMobile } = useDeviceType()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const isButtonDisabled = useMemo(() => !username || !password, [username, password])
 
   const styles = useStyles({
     Login: {
@@ -28,8 +30,16 @@ function Login ({ navigation }) {
   })
 
   function doLogin () {
+    if (!username) {
+      // TODO: show error.
+      return
+    }
+    if (!password) {
+      // TODO: show error.
+      return
+    }
+    // TODO: sanitize username and password.
     login({ username, password })
-    // TODO: Implement login.
   }
 
   return (
@@ -48,7 +58,10 @@ function Login ({ navigation }) {
         textContentType='password'
         secureTextEntry
       />
-      <Button onPress={doLogin}>
+      <Button
+        disabled={isButtonDisabled}
+        onPress={doLogin}
+      >
         <Paragraph>
           {t('login.label.login')}
         </Paragraph>

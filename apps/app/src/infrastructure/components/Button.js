@@ -4,6 +4,7 @@ import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { spacerHalf, borderRadius, borderWidth } from '@/infrastructure/styles'
 
 function Button ({ children, ...props }) {
+  // TODO: change button style if is disabled.
   const styles = useStyles({
     button: {
       width: '100%',

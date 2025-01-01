@@ -8,6 +8,7 @@ import { useState } from '@/infrastructure/hooks/useState'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { useTranslation } from '@/infrastructure/i18n'
 import { login } from '@/infrastructure/service/api'
+import { useUserStore } from '@/infrastructure/stores/user'
 import { spacer } from '@/infrastructure/styles'
 
 function Login ({ navigation }) {
@@ -39,7 +40,12 @@ function Login ({ navigation }) {
       return
     }
     // TODO: sanitize username and password.
-    login({ username, password })
+    const user = login({ username, password })
+
+    if (user) {
+      useUserStore.setState({ user })
+      navigation.navigate('Home')
+    }
   }
 
   return (

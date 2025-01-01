@@ -2,7 +2,7 @@ import { Box } from '@/infrastructure/components/Box'
 import { SafeArea } from '@/infrastructure/components/SafeArea'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 
-function Login ({ children }) {
+function Layout ({ children }) {
   const styles = useStyles({
     Login: {
       display: 'flex',
@@ -20,4 +20,4 @@ function Login ({ children }) {
   )
 }
 
-export { Login }
+export { Layout }

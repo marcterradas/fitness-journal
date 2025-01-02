@@ -1,5 +1,5 @@
+import { Picker } from '@react-native-picker/picker'
 import { useState, useMemo } from 'react'
-import { Picker } from 'react-native'
 
 import { Box } from '@/infrastructure/components/Box'
 
@@ -14,12 +14,8 @@ import { sortItems } from '@/domain/utils'
  */
 function Select ({ items = [], onSelectChange = () => {} }) {
   const placeholder = items[0]?.value || ''
-
   const [selectedValue, setSelectedValue] = useState(placeholder)
-
-  const sortedItems = useMemo(() => {
-    return sortItems({ items, selectedValue })
-  }, [selectedValue, items])
+  const sortedItems = useMemo(() => sortItems({ items, selectedValue }), [selectedValue, items])
 
   function handleSelect (itemValue) {
     setSelectedValue(itemValue)

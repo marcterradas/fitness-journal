@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import { Box } from '@/infrastructure/components/Box'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { fontSizes, spacerHalf, borderWidth, borderRadius, colors } from '@/infrastructure/styles'
+import { fontSizes, borderWidth, borderRadius, colors } from '@/infrastructure/styles'
 
 import { sortItems } from '@/domain/utils'
 
@@ -16,7 +16,7 @@ import { sortItems } from '@/domain/utils'
  * @param {function(string): void} props.onSelectChange - The callback function to call when the selected value changes.
  */
 function Select ({ items = [], onSelectChange = () => {} }) {
-  const { isMobile, isDesktop } = useDeviceType()
+  const { isMobile } = useDeviceType()
   const placeholder = items[0]?.value || ''
   const [selectedValue, setSelectedValue] = useState(placeholder)
   const sortedItems = useMemo(() => sortItems({ items, selectedValue }), [selectedValue, items])
@@ -26,11 +26,17 @@ function Select ({ items = [], onSelectChange = () => {} }) {
       width: '100%',
       borderWidth,
       borderRadius,
-      borderColor: colors.black
+      borderColor: colors.black,
+      backgroundColor: colors.white,
+      padding: 0,
+      margin: 0
     },
     picker: {
+      width: '100%',
+      height: 40,
       fontSize: isMobile ? fontSizes.sm : fontSizes.md,
-      padding: isDesktop ? spacerHalf : 0
+      padding: 0,
+      margin: 0
     }
   })
 
@@ -42,9 +48,9 @@ function Select ({ items = [], onSelectChange = () => {} }) {
   return (
     <Box style={styles.pickerContainer}>
       <Picker
-        style={styles.picker}
         selectedValue={selectedValue}
         onValueChange={(itemValue) => handleSelect(itemValue)}
+        style={styles.picker}
       >
         {sortedItems.map((item) => (
           <Picker.Item key={item.value} label={item.label} value={item.value} />

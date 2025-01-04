@@ -23,20 +23,29 @@ function Select ({ items = [], onSelectChange = () => {} }) {
 
   const styles = useStyles({
     pickerContainer: {
-      width: '100%',
-      borderWidth,
-      borderRadius,
       borderColor: colors.black,
-      backgroundColor: colors.white,
+      borderRadius,
+      borderWidth,
+      display: 'flex',
+      height,
+      justifyContent: 'center',
+      margin: 0,
+      overflow: 'hidden',
       padding: 0,
-      margin: 0
+      width: '100%'
     },
     picker: {
-      width: '100%',
-      height,
+      backgroundColor: colors.white,
       fontSize: isMobile ? fontSizes.sm : fontSizes.md,
+      height,
+      margin: 0,
       padding: 0,
-      margin: 0
+      width: '100%'
+    },
+    pickerItem: {
+      fontSize: isMobile ? fontSizes.sm : fontSizes.md,
+      margin: 0,
+      padding: 0
     }
   })
 
@@ -53,7 +62,12 @@ function Select ({ items = [], onSelectChange = () => {} }) {
         style={styles.picker}
       >
         {sortedItems.map((item) => (
-          <Picker.Item key={item.value} label={item.label} value={item.value} />
+          <Picker.Item
+            key={item.value}
+            label={item.label}
+            value={item.value}
+            style={styles.pickerItem}
+          />
         ))}
       </Picker>
     </Box>

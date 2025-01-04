@@ -4,6 +4,7 @@ const spacer = 16 // 1rem in pixels.
 const spacerHalf = spacer / 2
 const borderWidth = 1
 const borderRadius = 4
+const height = 40
 
 const fontSizes = {
   sm: baseSize / ratio,
@@ -27,5 +28,6 @@ export {
   spacer,
   spacerHalf,
   borderWidth,
-  borderRadius
+  borderRadius,
+  height
 }

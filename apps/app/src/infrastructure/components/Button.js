@@ -1,7 +1,7 @@
 import { Pressable } from 'react-native'
 
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { spacerHalf, borderRadius, borderWidth } from '@/infrastructure/styles'
+import { spacerHalf, borderRadius, borderWidth, height } from '@/infrastructure/styles'
 
 function Button ({ children, ...props }) {
   // TODO: change button style if is disabled.
@@ -13,7 +13,8 @@ function Button ({ children, ...props }) {
       justifyContent: 'center',
       padding: spacerHalf,
       borderRadius,
-      borderWidth
+      borderWidth,
+      height
     }
   })
   return (

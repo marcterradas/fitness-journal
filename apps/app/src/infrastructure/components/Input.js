@@ -2,7 +2,7 @@ import { TextInput } from 'react-native'
 
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { fontSizes, spacerHalf, borderWidth, borderRadius } from '@/infrastructure/styles'
+import { fontSizes, spacerHalf, borderWidth, borderRadius, height } from '@/infrastructure/styles'
 
 function Input (props) {
   const { isMobile } = useDeviceType()
@@ -14,7 +14,8 @@ function Input (props) {
       fontSize: isMobile ? fontSizes.sm : fontSizes.md,
       padding: spacerHalf,
       borderWidth,
-      borderRadius
+      borderRadius,
+      height
     }
   })
 

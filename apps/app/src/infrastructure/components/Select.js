@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import { Box } from '@/infrastructure/components/Box'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { fontSizes, borderWidth, borderRadius, colors } from '@/infrastructure/styles'
+import { fontSizes, borderWidth, borderRadius, height, colors } from '@/infrastructure/styles'
 
 import { sortItems } from '@/domain/utils'
 
@@ -33,7 +33,7 @@ function Select ({ items = [], onSelectChange = () => {} }) {
     },
     picker: {
       width: '100%',
-      height: 40,
+      height,
       fontSize: isMobile ? fontSizes.sm : fontSizes.md,
       padding: 0,
       margin: 0

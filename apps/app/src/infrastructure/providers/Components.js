@@ -1,8 +1,9 @@
 import { PaperProvider } from 'react-native-paper'
 
 function Components ({ children }) {
+  // TODO: remove light theme.
   return (
-    <PaperProvider>
+    <PaperProvider theme={'light'}>
       {children}
     </PaperProvider>
   )

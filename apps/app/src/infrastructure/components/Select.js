@@ -14,18 +14,18 @@ import { sortItems } from '@/domain/utils'
  * @param {Array<{label: string, value: string}>} props.options - The array of options to display in the dropdown.
  * @param {function(string): void} props.onValueChange - The callback function to call when the selected value changes.
  */
-const Select = ({ options, label, onValueChange }) => {
+const Select = ({ options, onValueChange }) => {
   const [visible, setVisible] = useState(false)
-  const [selectedValue, setSelectedValue] = useState(options[0].value)
+  const [selectedValue, setSelectedValue] = useState(options[0])
 
-  const sortedOptions = useMemo(() => sortItems({ items: options, selectedValue }), [selectedValue, options])
+  const sortedOptions = useMemo(() => sortItems({ items: options, selectedValue: selectedValue.value }), [selectedValue, options])
 
   const openMenu = () => setVisible(true)
   const closeMenu = () => setVisible(false)
 
-  const handleSelect = (value) => {
-    setSelectedValue(value)
-    onValueChange(value)
+  const handleSelect = (option) => {
+    setSelectedValue(option)
+    onValueChange(option.value)
     closeMenu()
   }
 
@@ -37,8 +37,7 @@ const Select = ({ options, label, onValueChange }) => {
         anchor={
           <Input
             type="select"
-            label={label}
-            value={selectedValue}
+            value={selectedValue.label}
             editable={false}
             onPress={openMenu}
             onClick={openMenu}
@@ -48,7 +47,7 @@ const Select = ({ options, label, onValueChange }) => {
         {sortedOptions.map((option, index) => (
           <Menu.Item
             key={index}
-            onPress={() => handleSelect(option.value)}
+            onPress={() => handleSelect(option)}
             title={option.label}
           />
         ))}

@@ -3,11 +3,13 @@ import { Button } from '@/infrastructure/components/Button'
 import { Card } from '@/infrastructure/components/Card'
 import { Input } from '@/infrastructure/components/Input'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
+import { Select } from '@/infrastructure/components/Select'
+import config from '@/infrastructure/config'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useMemo } from '@/infrastructure/hooks/useMemo'
 import { useState } from '@/infrastructure/hooks/useState'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { useTranslation } from '@/infrastructure/i18n'
+import { useTranslation, changeLanguage } from '@/infrastructure/i18n'
 import { login } from '@/infrastructure/service/api'
 import { useUserStore } from '@/infrastructure/stores/user'
 import { spacer } from '@/infrastructure/styles'
@@ -18,23 +20,6 @@ function Login ({ navigation }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const isButtonDisabled = useMemo(() => !username || !password, [username, password])
-
-  const styles = useStyles({
-    container: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: 'auto',
-      width: isMobile ? '100%' : '30%',
-      padding: spacer
-    },
-    content: {
-      display: 'flex',
-      height: 'auto',
-      gap: spacer,
-      width: '100%'
-    }
-  })
 
   function doLogin () {
     if (!username) {
@@ -54,8 +39,26 @@ function Login ({ navigation }) {
     }
   }
 
+  function updateLanguage (language) {
+    changeLanguage(language)
+  }
+
+  const styles = useStyles({
+    container: {
+      display: 'flex',
+      alignItems: 'flex-end',
+      width: isMobile ? '100%' : '30%'
+    },
+    cardContent: {
+      display: 'flex',
+      height: 'auto',
+      gap: spacer,
+      width: '100%'
+    }
+  })
+
   const content = (
-    <Box style={styles.content}>
+    <Box style={styles.cardContent}>
       <Input
         type='username'
         label={t('login.label.username')}
@@ -82,12 +85,16 @@ function Login ({ navigation }) {
   )
 
   return (
-    <Card
-      title={t('login.label.login')}
-      style={styles.container}
-      contentStyle={styles.content}
-      content={content}
-    />
+    <Box style={styles.container}>
+      <Card
+        title={t('login.label.login')}
+        content={content}
+      />
+      <Select
+        options={config.languages}
+        onValueChange={updateLanguage}
+      />
+    </Box>
   )
 }
 

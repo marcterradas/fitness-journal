@@ -1,26 +1,26 @@
-import { Pressable } from 'react-native'
+import { Button as CustomButton } from 'react-native-paper'
 
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { spacerHalf, borderRadius, borderWidth, height } from '@/infrastructure/styles'
+import { borderRadius, height } from '@/infrastructure/styles'
 
 function Button ({ children, ...props }) {
-  // TODO: change button style if is disabled.
   const styles = useStyles({
     button: {
       width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: spacerHalf,
-      borderRadius,
-      borderWidth,
-      height
+      height,
+      borderRadius
     }
   })
+
   return (
-    <Pressable style={styles.button} {...props}>
+    <CustomButton
+      {...props}
+      mode="contained"
+      style={styles.button}
+      compact={false}
+    >
       {children}
-    </Pressable>
+    </CustomButton>
   )
 }
 

@@ -57,17 +57,17 @@ function Login ({ navigation }) {
   const content = (
     <Box style={styles.content}>
       <Input
+        type='username'
         label={t('login.label.username')}
         value={username}
         onChangeText={setUsername}
         autoFocus
-        textContentType='username'
       />
       <Input
+        type='password'
         label={t('login.label.password')}
         value={password}
         onChangeText={setPassword}
-        textContentType='password'
         secureTextEntry
       />
       <Button

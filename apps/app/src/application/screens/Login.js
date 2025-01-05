@@ -51,14 +51,14 @@ function Login ({ navigation }) {
   return (
     <Box style={styles.Login}>
       <Input
-        placeholder={t('login.label.username')}
+        label={t('login.label.username')}
         value={username}
         onChangeText={setUsername}
         autoFocus
         textContentType='username'
       />
       <Input
-        placeholder={t('login.label.password')}
+        label={t('login.label.password')}
         value={password}
         onChangeText={setPassword}
         textContentType='password'

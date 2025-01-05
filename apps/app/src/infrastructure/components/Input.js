@@ -9,7 +9,23 @@ import { fontSizes, height } from '@/infrastructure/styles'
 function Input (props) {
   const { isMobile } = useDeviceType()
   const [passwordVisible, setPasswordVisible] = useState(false)
-  const isPassword = props.textContentType === 'password'
+  const isPassword = useMemo(() => props.type === 'password' && !passwordVisible, [props.type, passwordVisible])
+
+  const rightIcon = useMemo(() => {
+    switch (props.type) {
+    case 'password':
+      return (
+        <TextInput.Icon
+          icon={passwordVisible ? 'eye-off' : 'eye'}
+          onPress={() => setPasswordVisible(!passwordVisible)}
+        />
+      )
+    case 'select':
+      return <TextInput.Icon icon="chevron-down" onPress={props.onPress} />
+    default:
+      return null
+    }
+  }, [props.type, passwordVisible, props.onPress])
 
   const style = useStyles({
     input: {
@@ -19,23 +35,13 @@ function Input (props) {
     }
   })
 
-  const rightIcon = useMemo(() => {
-    if (!isPassword) return null
-    return (
-      <TextInput.Icon
-        icon={passwordVisible ? 'eye-off' : 'eye'}
-        onPress={() => setPasswordVisible(!passwordVisible)}
-      />
-    )
-  }, [isPassword, passwordVisible])
-
   return (
     <TextInput
       {...props}
       mode="outlined"
       style={style.input}
       right={rightIcon}
-      secureTextEntry={isPassword && !passwordVisible}
+      secureTextEntry={isPassword}
     />
   )
 }

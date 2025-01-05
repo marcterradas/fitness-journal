@@ -7,7 +7,8 @@ module.exports = {
           node: 'current'
         }
       }
-    ]
+    ],
+    'babel-preset-expo'
   ],
   plugins: [
     [
@@ -19,6 +20,7 @@ module.exports = {
           '@': './src/'
         }
       }
-    ]
+    ],
+    'react-native-paper/babel'
   ]
 }

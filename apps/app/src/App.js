@@ -1,11 +1,14 @@
 import '@/infrastructure/i18n'
 
 import { registerRootComponent } from '@/infrastructure/hooks/useRegisterRootComponent'
-import { Navigation } from '@/infrastructure/providers/Navigation'
+import { Components as ComponentsProvider } from '@/infrastructure/providers/Components'
+import { Navigation as NavigationProvider } from '@/infrastructure/providers/Navigation'
 
 export function App () {
   return (
-    <Navigation />
+    <ComponentsProvider>
+      <NavigationProvider />
+    </ComponentsProvider>
   )
 }
 

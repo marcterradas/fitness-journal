@@ -1,10 +1,9 @@
-import { Picker } from '@react-native-picker/picker'
-import { useState, useMemo } from 'react'
+import { Menu } from 'react-native-paper'
 
 import { Box } from '@/infrastructure/components/Box'
-import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
-import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { fontSizes, borderWidth, borderRadius, height, colors } from '@/infrastructure/styles'
+import { Input } from '@/infrastructure/components/Input'
+import { useMemo } from '@/infrastructure/hooks/useMemo'
+import { useState } from '@/infrastructure/hooks/useState'
 
 import { sortItems } from '@/domain/utils'
 
@@ -12,64 +11,48 @@ import { sortItems } from '@/domain/utils'
  * Select component for rendering a dropdown list.
  *
  * @param {Object} props - The component props.
- * @param {Array<{label: string, value: string}>} props.items - The array of items to display in the dropdown.
- * @param {function(string): void} props.onSelectChange - The callback function to call when the selected value changes.
+ * @param {Array<{label: string, value: string}>} props.options - The array of options to display in the dropdown.
+ * @param {function(string): void} props.onValueChange - The callback function to call when the selected value changes.
  */
-function Select ({ items = [], onSelectChange = () => {} }) {
-  const { isMobile } = useDeviceType()
-  const placeholder = items[0]?.value || ''
-  const [selectedValue, setSelectedValue] = useState(placeholder)
-  const sortedItems = useMemo(() => sortItems({ items, selectedValue }), [selectedValue, items])
+const Select = ({ options, label, onValueChange }) => {
+  const [visible, setVisible] = useState(false)
+  const [selectedValue, setSelectedValue] = useState(options[0].value)
 
-  const styles = useStyles({
-    pickerContainer: {
-      borderColor: colors.black,
-      borderRadius,
-      borderWidth,
-      display: 'flex',
-      height,
-      justifyContent: 'center',
-      margin: 0,
-      overflow: 'hidden',
-      padding: 0,
-      width: '100%'
-    },
-    picker: {
-      backgroundColor: colors.white,
-      fontSize: isMobile ? fontSizes.sm : fontSizes.md,
-      height,
-      margin: 0,
-      padding: 0,
-      width: '100%'
-    },
-    pickerItem: {
-      fontSize: isMobile ? fontSizes.sm : fontSizes.md,
-      margin: 0,
-      padding: 0
-    }
-  })
+  const sortedOptions = useMemo(() => sortItems({ items: options, selectedValue }), [selectedValue, options])
 
-  function handleSelect (itemValue) {
-    setSelectedValue(itemValue)
-    onSelectChange(itemValue)
+  const openMenu = () => setVisible(true)
+  const closeMenu = () => setVisible(false)
+
+  const handleSelect = (value) => {
+    setSelectedValue(value)
+    onValueChange(value)
+    closeMenu()
   }
 
   return (
-    <Box style={styles.pickerContainer}>
-      <Picker
-        selectedValue={selectedValue}
-        onValueChange={(itemValue) => handleSelect(itemValue)}
-        style={styles.picker}
+    <Box>
+      <Menu
+        visible={visible}
+        onDismiss={closeMenu}
+        anchor={
+          <Input
+            type="select"
+            label={label}
+            value={selectedValue}
+            editable={false}
+            onPress={openMenu}
+            onClick={openMenu}
+          />
+        }
       >
-        {sortedItems.map((item) => (
-          <Picker.Item
-            key={item.value}
-            label={item.label}
-            value={item.value}
-            style={styles.pickerItem}
+        {sortedOptions.map((option, index) => (
+          <Menu.Item
+            key={index}
+            onPress={() => handleSelect(option.value)}
+            title={option.label}
           />
         ))}
-      </Picker>
+      </Menu>
     </Box>
   )
 }

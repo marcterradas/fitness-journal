@@ -1,26 +1,42 @@
-import { TextInput } from 'react-native'
+import { TextInput } from 'react-native-paper'
 
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
+import { useMemo } from '@/infrastructure/hooks/useMemo'
+import { useState } from '@/infrastructure/hooks/useState'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { fontSizes, spacerHalf, borderWidth, borderRadius, height } from '@/infrastructure/styles'
+import { fontSizes, height } from '@/infrastructure/styles'
 
 function Input (props) {
   const { isMobile } = useDeviceType()
+  const [passwordVisible, setPasswordVisible] = useState(false)
+  const isPassword = props.textContentType === 'password'
 
-  // TODO: change input style if has an error.
   const style = useStyles({
     input: {
       width: '100%',
       fontSize: isMobile ? fontSizes.sm : fontSizes.md,
-      padding: spacerHalf,
-      borderWidth,
-      borderRadius,
       height
     }
   })
 
+  const rightIcon = useMemo(() => {
+    if (!isPassword) return null
+    return (
+      <TextInput.Icon
+        icon={passwordVisible ? 'eye-off' : 'eye'}
+        onPress={() => setPasswordVisible(!passwordVisible)}
+      />
+    )
+  }, [isPassword, passwordVisible])
+
   return (
-    <TextInput style={style.input} {...props} />
+    <TextInput
+      {...props}
+      mode="outlined"
+      style={style.input}
+      right={rightIcon}
+      secureTextEntry={isPassword && !passwordVisible}
+    />
   )
 }
 

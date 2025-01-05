@@ -30,7 +30,7 @@ function Login ({ navigation }) {
     },
     content: {
       display: 'flex',
-      height: '100%',
+      height: 'auto',
       gap: spacer,
       width: '100%'
     }

@@ -1,5 +1,6 @@
 import { Box } from '@/infrastructure/components/Box'
 import { Button } from '@/infrastructure/components/Button'
+import { Card } from '@/infrastructure/components/Card'
 import { Input } from '@/infrastructure/components/Input'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
@@ -19,14 +20,19 @@ function Login ({ navigation }) {
   const isButtonDisabled = useMemo(() => !username || !password, [username, password])
 
   const styles = useStyles({
-    Login: {
+    container: {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       height: 'auto',
+      width: isMobile ? '100%' : '30%',
+      padding: spacer
+    },
+    content: {
+      display: 'flex',
+      height: '100%',
       gap: spacer,
-      padding: spacer,
-      width: isMobile ? '100%' : '30%'
+      width: '100%'
     }
   })
 
@@ -48,8 +54,8 @@ function Login ({ navigation }) {
     }
   }
 
-  return (
-    <Box style={styles.Login}>
+  const content = (
+    <Box style={styles.content}>
       <Input
         label={t('login.label.username')}
         value={username}
@@ -73,6 +79,15 @@ function Login ({ navigation }) {
         </Paragraph>
       </Button>
     </Box>
+  )
+
+  return (
+    <Card
+      title={t('login.label.login')}
+      style={styles.container}
+      contentStyle={styles.content}
+      content={content}
+    />
   )
 }
 

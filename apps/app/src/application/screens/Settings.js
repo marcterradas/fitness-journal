@@ -12,7 +12,7 @@ function Settings ({ navigation }) {
   return (
     <Box>
       <Paragraph>Settings Screen</Paragraph>
-      <Select items={config.languages} onSelectChange={updateLanguage} />
+      <Select options={config.languages} onValueChange={updateLanguage} />
     </Box>
   )
 }

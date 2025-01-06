@@ -43,7 +43,8 @@ function Input (props) {
       backgroundColor: 'transparent',
       borderRadius,
       fontSize: fontSizes.sm,
-      height: 30
+      height: 30,
+      width: 120
     },
     underlineStyle: {
       height: 0

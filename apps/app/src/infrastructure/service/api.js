@@ -10,11 +10,15 @@ async function login ({ username, password }) {
       },
       body: JSON.stringify({ username, password })
     })
-    // TODO: show toast.
-    return response
+
+    switch (response.status) {
+    case 200: return { status: true, data: await response.json() }
+    case 400: return { status: false, error: 'login.error.missingCredentials' }
+    case 404: return { status: false, error: 'login.error.userNotFound' }
+    case 500: return { status: false, error: 'common.label.internalServerError' }
+    }
   } catch (error) {
-    // TODO: show toast.
-    return error
+    return { status: false, error: 'common.label.internalServerError' }
   }
 }
 

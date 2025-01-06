@@ -4,7 +4,7 @@ import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useMemo } from '@/infrastructure/hooks/useMemo'
 import { useState } from '@/infrastructure/hooks/useState'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { fontSizes, height } from '@/infrastructure/styles'
+import { fontSizes, height, borderRadius } from '@/infrastructure/styles'
 
 function Input (props) {
   const { isMobile } = useDeviceType()
@@ -21,7 +21,12 @@ function Input (props) {
         />
       )
     case 'select':
-      return <TextInput.Icon icon="chevron-down" onPress={props.onPress} />
+      return (
+        <TextInput.Icon
+          icon="chevron-down"
+          onPress={props.onPress}
+        />
+      )
     default:
       return null
     }
@@ -29,17 +34,28 @@ function Input (props) {
 
   const style = useStyles({
     input: {
-      width: '100%',
+      borderRadius,
       fontSize: isMobile ? fontSizes.sm : fontSizes.md,
-      height
+      height,
+      width: '100%'
+    },
+    compact: {
+      backgroundColor: 'transparent',
+      borderRadius,
+      fontSize: fontSizes.sm,
+      height: 30
+    },
+    underlineStyle: {
+      height: 0
     }
   })
 
   return (
     <TextInput
       {...props}
-      mode="outlined"
-      style={style.input}
+      mode={props.isCompact ? 'flat' : 'outlined'}
+      style={props.isCompact ? style.compact : style.input}
+      underlineStyle={style.underlineStyle}
       right={rightIcon}
       secureTextEntry={isPassword}
     />

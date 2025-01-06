@@ -12,7 +12,7 @@ import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { useTranslation, changeLanguage } from '@/infrastructure/i18n'
 import { login } from '@/infrastructure/service/api'
 import { useUserStore } from '@/infrastructure/stores/user'
-import { spacer } from '@/infrastructure/styles'
+import { spacer, spacerHalf } from '@/infrastructure/styles'
 
 function Login ({ navigation }) {
   const { t } = useTranslation()
@@ -47,7 +47,8 @@ function Login ({ navigation }) {
     container: {
       display: 'flex',
       alignItems: 'flex-end',
-      width: isMobile ? '100%' : '30%'
+      width: isMobile ? '100%' : '30%',
+      gap: spacerHalf
     },
     cardContent: {
       display: 'flex',
@@ -91,6 +92,7 @@ function Login ({ navigation }) {
         content={content}
       />
       <Select
+        isCompact
         options={config.languages}
         onValueChange={updateLanguage}
       />

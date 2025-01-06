@@ -1,5 +1,8 @@
 {
     "translation": {
+        "common.label.internalServerError": "Error intern del servidor",
+        "login.error.missingCredentials": "Falta el nom d'usuari o la contrasenya",
+        "login.error.userNotFound": "Usuari no trobat",
         "login.label.login": "Iniciar sessió",
         "login.label.password": "Contrasenya",
         "login.label.username": "Nom d'usuari",

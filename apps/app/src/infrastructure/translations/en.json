@@ -1,5 +1,8 @@
 {
     "translation": {
+        "common.label.internalServerError": "Internal server error",
+        "login.error.missingCredentials": "Username or password is missing",
+        "login.error.userNotFound": "User not found",
         "login.label.login": "Login",
         "login.label.password": "Password",
         "login.label.username": "Username",

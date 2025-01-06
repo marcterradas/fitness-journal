@@ -14,10 +14,9 @@ import { sortItems } from '@/domain/utils'
  * @param {Array<{label: string, value: string}>} props.options - The array of options to display in the dropdown.
  * @param {function(string): void} props.onValueChange - The callback function to call when the selected value changes.
  */
-const Select = ({ options, onValueChange }) => {
+const Select = ({ options, onValueChange, isCompact }) => {
   const [visible, setVisible] = useState(false)
   const [selectedValue, setSelectedValue] = useState(options[0])
-
   const sortedOptions = useMemo(() => sortItems({ items: options, selectedValue: selectedValue.value }), [selectedValue, options])
 
   const openMenu = () => setVisible(true)
@@ -37,6 +36,7 @@ const Select = ({ options, onValueChange }) => {
         anchor={
           <Input
             type="select"
+            isCompact
             value={selectedValue.label}
             editable={false}
             onPress={openMenu}

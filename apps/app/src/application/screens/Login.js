@@ -4,6 +4,7 @@ import { Card } from '@/infrastructure/components/Card'
 import { Input } from '@/infrastructure/components/Input'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 import { Select } from '@/infrastructure/components/Select'
+import { Snackbar } from '@/infrastructure/components/Snackbar'
 import config from '@/infrastructure/config'
 import { useDeviceType } from '@/infrastructure/hooks/useDeviceType'
 import { useMemo } from '@/infrastructure/hooks/useMemo'
@@ -19,24 +20,24 @@ function Login ({ navigation }) {
   const { isMobile } = useDeviceType()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const isButtonDisabled = useMemo(() => !username || !password, [username, password])
+  const [hasFormErrors, setHasFormErrors] = useState(false)
+  const [isSnakbarVisible, setIsSnackbarVisible] = useState(false)
+  const [snackbarMessage, setSnackbarMessage] = useState('')
+  const isButtonDisabled = useMemo(() => !username.trim() || !password.trim(), [username, password])
 
-  function doLogin () {
-    if (!username) {
-      // TODO: show error.
-      return
-    }
-    if (!password) {
-      // TODO: show error.
-      return
-    }
+  async function doLogin () {
     // TODO: sanitize username and password.
-    const user = login({ username, password })
+    const { status, data: user, error } = await login({ username, password })
 
-    if (user) {
-      useUserStore.setState({ user })
-      navigation.navigate('Home')
+    if (!status) {
+      setIsSnackbarVisible(true)
+      setSnackbarMessage(t(error))
+      setHasFormErrors(!status)
+      return
     }
+
+    useUserStore.setState({ user })
+    navigation.navigate('Home')
   }
 
   function updateLanguage (language) {
@@ -65,6 +66,7 @@ function Login ({ navigation }) {
         label={t('login.label.username')}
         value={username}
         onChangeText={setUsername}
+        error={hasFormErrors}
         autoFocus
       />
       <Input
@@ -72,6 +74,7 @@ function Login ({ navigation }) {
         label={t('login.label.password')}
         value={password}
         onChangeText={setPassword}
+        error={hasFormErrors}
         secureTextEntry
       />
       <Button
@@ -86,17 +89,26 @@ function Login ({ navigation }) {
   )
 
   return (
-    <Box style={styles.container}>
-      <Card
-        title={t('login.label.login')}
-        content={content}
-      />
-      <Select
-        isCompact
-        options={config.languages}
-        onValueChange={updateLanguage}
-      />
-    </Box>
+    <>
+      <Box style={styles.container}>
+        <Card
+          title={t('login.label.login')}
+          content={content}
+        />
+        <Select
+          isCompact
+          options={config.languages}
+          onValueChange={updateLanguage}
+        />
+      </Box>
+      <Snackbar
+        visible={isSnakbarVisible}
+        onDismiss={() => setIsSnackbarVisible(false)}
+        onIconPress={() => setIsSnackbarVisible(false)}
+      >
+        {snackbarMessage}
+      </Snackbar>
+    </>
   )
 }
 

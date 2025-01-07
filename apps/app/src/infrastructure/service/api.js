@@ -18,7 +18,7 @@ async function login ({ username, password }) {
     case 500: return { status: false, error: 'common.label.internalServerError' }
     }
   } catch (error) {
-    return { status: false, error: 'common.label.internalServerError' }
+    return { status: false, error: 'common.label.offline' }
   }
 }
 

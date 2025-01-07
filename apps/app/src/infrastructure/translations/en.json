@@ -1,6 +1,7 @@
 {
     "translation": {
         "common.label.internalServerError": "Internal server error",
+        "common.label.offline": "No internet connection",
         "login.error.missingCredentials": "Username or password is missing",
         "login.error.userNotFound": "User not found",
         "login.label.login": "Login",

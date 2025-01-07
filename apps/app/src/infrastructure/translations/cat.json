@@ -1,6 +1,7 @@
 {
     "translation": {
         "common.label.internalServerError": "Error intern del servidor",
+        "common.label.offline": "No hi ha connexió a internet",
         "login.error.missingCredentials": "Falta el nom d'usuari o la contrasenya",
         "login.error.userNotFound": "Usuari no trobat",
         "login.label.login": "Iniciar sessió",

@@ -33,7 +33,7 @@ function Bottom ({ navigation }) {
         <Paragraph>{t('navigation.label.profile')}</Paragraph>
       </Link>
       <Link onPress={() => goTo('Workout')}>
-        <Paragraph>{t('navigation.label.workouts')}</Paragraph>
+        <Paragraph>{t('navigation.label.workout')}</Paragraph>
       </Link>
       <Link onPress={() => goTo('Settings')}>
         <Paragraph>{t('navigation.label.settings')}</Paragraph>

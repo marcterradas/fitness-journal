@@ -1,6 +1,6 @@
 import { Bottom } from '@/application/common/Bottom'
-import { NavBar } from '@/application/common/NavBar'
 
+import { Appbar } from '@/infrastructure/components/Appbar'
 import { Box } from '@/infrastructure/components/Box'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
@@ -25,7 +25,7 @@ function DefaultLayout ({ children, navigation }) {
   return (
     <Box style={styles.mobile}>
       <Box>
-        <NavBar navigation={navigation} />
+        <Appbar navigation={navigation} />
         <Box style={styles.content}>
           {children}
         </Box>

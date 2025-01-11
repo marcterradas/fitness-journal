@@ -1,12 +1,12 @@
-import { Bottom } from '@/application/mobile/Bottom'
-import { NavBar } from '@/application/mobile/NavBar'
+import { Bottom } from '@/application/common/Bottom'
+import { NavBar } from '@/application/common/NavBar'
 
 import { Box } from '@/infrastructure/components/Box'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { spacerHalf } from '@/infrastructure/styles'
 
-function Layout ({ children, navigation }) {
+function DefaultLayout ({ children, navigation }) {
   const { screenHeight, screenWidth } = useDimensions()
   const styles = useStyles({
     mobile: {
@@ -35,4 +35,4 @@ function Layout ({ children, navigation }) {
   )
 }
 
-export { Layout }
+export { DefaultLayout }

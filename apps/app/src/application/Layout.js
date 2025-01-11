@@ -1,5 +1,5 @@
+import { DefaultLayout } from '@/application/common/DefaultLayout'
 import { Layout as LoginLayout } from '@/application/common/LoginLayout'
-import { Layout as MobileLayout } from '@/application/mobile/Layout'
 
 import { SafeArea } from '@/infrastructure/components/SafeArea'
 import { useUserStore } from '@/infrastructure/stores/user'
@@ -17,9 +17,9 @@ function Layout ({ children, navigation }) {
 
   return (
     <SafeArea>
-      <MobileLayout navigation={navigation}>
+      <DefaultLayout navigation={navigation}>
         {children}
-      </MobileLayout>
+      </DefaultLayout>
     </SafeArea>
   )
 }

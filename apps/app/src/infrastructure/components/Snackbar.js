@@ -1,8 +1,8 @@
-import { Snackbar as CustomSnackbar } from 'react-native-paper'
+import { Snackbar as PaperSnakbar } from 'react-native-paper'
 
 function Snackbar (props) {
   return (
-    <CustomSnackbar
+    <PaperSnakbar
       icon='close'
       {...props}
     />

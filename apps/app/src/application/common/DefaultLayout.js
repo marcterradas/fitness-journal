@@ -1,6 +1,5 @@
-import { Bottom } from '@/application/common/Bottom'
-
 import { Appbar } from '@/infrastructure/components/Appbar'
+import { BottomNavigation } from '@/infrastructure/components/BottomNavigation'
 import { Box } from '@/infrastructure/components/Box'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
@@ -30,7 +29,7 @@ function DefaultLayout ({ children, navigation }) {
           {children}
         </Box>
       </Box>
-      <Bottom navigation={navigation} />
+      <BottomNavigation navigation={navigation} />
     </Box>
   )
 }

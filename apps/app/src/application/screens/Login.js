@@ -12,6 +12,7 @@ import { useState } from '@/infrastructure/hooks/useState'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { useTranslation, changeLanguage } from '@/infrastructure/i18n'
 import { login } from '@/infrastructure/service/api'
+import { useNavigationStore } from '@/infrastructure/stores/navigation'
 import { useUserStore } from '@/infrastructure/stores/user'
 import { spacer, spacerHalf } from '@/infrastructure/styles'
 
@@ -37,6 +38,7 @@ function Login () {
     }
 
     useUserStore.setState({ user })
+    useNavigationStore.setState({ currentRoute: 'home' })
   }
 
   function updateLanguage (language) {

@@ -1,10 +1,8 @@
-import { lazy } from 'react'
-
-const Home = lazy(() => import('@/application/screens/Home'))
-const Profile = lazy(() => import('@/application/screens/Profile'))
-const Settings = lazy(() => import('@/application/screens/Settings'))
-const Workout = lazy(() => import('@/application/screens/Workout'))
-const Login = lazy(() => import('@/application/screens/Login'))
+import Home from '@/application/screens/Home'
+import Login from '@/application/screens/Login'
+import Profile from '@/application/screens/Profile'
+import Settings from '@/application/screens/Settings'
+import Workout from '@/application/screens/Workout'
 
 const routes = [
   { name: 'Home', component: Home },

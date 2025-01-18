@@ -5,7 +5,7 @@ import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { spacerHalf } from '@/infrastructure/styles'
 
-function DefaultLayout ({ children, navigation }) {
+function DefaultLayout ({ children }) {
   const { screenHeight, screenWidth } = useDimensions()
   const styles = useStyles({
     mobile: {
@@ -24,12 +24,12 @@ function DefaultLayout ({ children, navigation }) {
   return (
     <Box style={styles.mobile}>
       <Box>
-        <Appbar navigation={navigation} />
+        <Appbar />
         <Box style={styles.content}>
           {children}
         </Box>
       </Box>
-      <BottomNavigation navigation={navigation} />
+      <BottomNavigation />
     </Box>
   )
 }

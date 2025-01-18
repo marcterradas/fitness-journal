@@ -3,7 +3,7 @@ import { Appbar as PaperAppbar } from 'react-native-paper'
 
 import { useTranslation } from '@/infrastructure/i18n'
 
-function Appbar ({ navigation }) {
+function Appbar () {
   const route = useRoute()
   const { t } = useTranslation()
   const title = t(`navigation.label.${route.name.toLocaleLowerCase()}`)

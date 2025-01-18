@@ -17,7 +17,7 @@ function Layout ({ children, navigation }) {
 
   return (
     <SafeArea>
-      <DefaultLayout navigation={navigation}>
+      <DefaultLayout>
         {children}
       </DefaultLayout>
     </SafeArea>

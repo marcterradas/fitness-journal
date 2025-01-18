@@ -4,7 +4,7 @@ import { useState } from '@/infrastructure/hooks/useState'
 import { useTranslation } from '@/infrastructure/i18n'
 import { routes } from '@/infrastructure/routes'
 
-function BottomNavigation ({ navigation }) {
+function BottomNavigation () {
   const { t } = useTranslation()
   const [index, setIndex] = useState(0)
 

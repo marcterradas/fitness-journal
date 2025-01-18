@@ -15,7 +15,7 @@ import { login } from '@/infrastructure/service/api'
 import { useUserStore } from '@/infrastructure/stores/user'
 import { spacer, spacerHalf } from '@/infrastructure/styles'
 
-function Login ({ navigation }) {
+function Login () {
   const { t } = useTranslation()
   const { isMobile } = useDeviceType()
   const [username, setUsername] = useState('')
@@ -37,7 +37,6 @@ function Login ({ navigation }) {
     }
 
     useUserStore.setState({ user })
-    navigation.navigate('Home')
   }
 
   function updateLanguage (language) {

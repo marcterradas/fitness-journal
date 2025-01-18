@@ -3,6 +3,7 @@ import { BottomNavigation as PaperBottomNavigation } from 'react-native-paper'
 import { useState } from '@/infrastructure/hooks/useState'
 import { useTranslation } from '@/infrastructure/i18n'
 import { routes } from '@/infrastructure/routes'
+import { useNavigationStore } from '@/infrastructure/stores/navigation'
 
 function BottomNavigation () {
   const { t } = useTranslation()
@@ -20,10 +21,17 @@ function BottomNavigation () {
     return acc
   }, {}))
 
+  function handleIndexChange (newIndex) {
+    const { key: currentRoute } = routesList[newIndex]
+
+    setIndex(newIndex)
+    useNavigationStore.setState({ currentRoute })
+  }
+
   return (
     <PaperBottomNavigation
       navigationState={{ index, routes: routesList }}
-      onIndexChange={setIndex}
+      onIndexChange={handleIndexChange}
       renderScene={renderScene}
     />
   )

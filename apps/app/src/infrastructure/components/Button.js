@@ -3,9 +3,12 @@ import { Button as PaperButton } from 'react-native-paper'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
 import { borderRadius, height } from '@/infrastructure/styles'
 
-function Button ({ children, color, ...props }) {
+function Button ({ children, color, mode, ...props }) {
+  const buttonMode = mode || 'contained'
+
   const styles = useStyles({
     button: {
+      flex: 1,
       width: '100%',
       height,
       borderRadius,
@@ -16,7 +19,7 @@ function Button ({ children, color, ...props }) {
   return (
     <PaperButton
       {...props}
-      mode="contained"
+      mode={buttonMode}
       style={styles.button}
       compact={false}
     >

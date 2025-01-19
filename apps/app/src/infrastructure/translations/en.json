@@ -1,5 +1,7 @@
 {
     "translation": {
+        "common.label.cancel": "Cancel",
+        "common.label.confirm": "Confirm",
         "common.label.internalServerError": "Internal server error",
         "common.label.offline": "No internet connection",
         "login.error.missingCredentials": "Username or password is missing",
@@ -12,6 +14,7 @@
         "navigation.label.settings": "Settings",
         "navigation.label.workout": "Workout",
         "settings.label.changeLanguage": "Change language",
+        "settings.label.confirmLogout": "Are you sure you want to logout?",
         "settings.label.logout": "Logout"
     }
 }

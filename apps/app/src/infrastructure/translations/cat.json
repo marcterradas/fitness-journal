@@ -1,5 +1,7 @@
 {
     "translation": {
+        "common.label.cancel": "Cancel·lar",
+        "common.label.confirm": "Confirmar",
         "common.label.internalServerError": "Error intern del servidor",
         "common.label.offline": "No hi ha connexió a internet",
         "login.error.missingCredentials": "Falta el nom d'usuari o la contrasenya",
@@ -12,6 +14,7 @@
         "navigation.label.settings": "Configuració",
         "navigation.label.workout": "Entrenament",
         "settings.label.changeLanguage": "Canviar idioma",
+        "settings.label.confirmLogout": "Estàs segur que vols tancar sessió?",
         "settings.label.logout": "Tancar sessió"
     }
 }

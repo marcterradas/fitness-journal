@@ -36,7 +36,7 @@ const Select = ({ options, onValueChange, isCompact }) => {
         anchor={
           <Input
             type="select"
-            isCompact
+            isCompact={isCompact}
             value={selectedValue.label}
             editable={false}
             onPress={openMenu}

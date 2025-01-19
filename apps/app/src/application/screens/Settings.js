@@ -4,7 +4,7 @@ import { Select } from '@/infrastructure/components/Select'
 import config from '@/infrastructure/config'
 import { changeLanguage } from '@/infrastructure/i18n'
 
-function Settings ({ navigation }) {
+function Settings () {
   function updateLanguage (language) {
     changeLanguage(language)
   }

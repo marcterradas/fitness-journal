@@ -11,6 +11,7 @@
         "navigation.label.profile": "Perfil",
         "navigation.label.settings": "Configuració",
         "navigation.label.workout": "Entrenament",
-        "settings.label.changeLanguage": "Canviar idioma"
+        "settings.label.changeLanguage": "Canviar idioma",
+        "settings.label.logout": "Tancar sessió"
     }
 }

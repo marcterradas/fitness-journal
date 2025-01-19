@@ -11,6 +11,7 @@
         "navigation.label.profile": "Profile",
         "navigation.label.settings": "Settings",
         "navigation.label.workout": "Workout",
-        "settings.label.changeLanguage": "Change language"
+        "settings.label.changeLanguage": "Change language",
+        "settings.label.logout": "Logout"
     }
 }

@@ -1,7 +1,7 @@
 import { Box } from '@/infrastructure/components/Box'
 import { Paragraph } from '@/infrastructure/components/Paragraph'
 
-function Workout ({ navigation }) {
+function Workout () {
   return (
     <Box>
       <Paragraph>Workout Screen</Paragraph>

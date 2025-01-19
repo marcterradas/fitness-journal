@@ -10,6 +10,7 @@
         "navigation.label.home": "Inici",
         "navigation.label.profile": "Perfil",
         "navigation.label.settings": "Configuració",
-        "navigation.label.workout": "Entrenament"
+        "navigation.label.workout": "Entrenament",
+        "settings.label.changeLanguage": "Canviar idioma"
     }
 }

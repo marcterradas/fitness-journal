@@ -19,10 +19,8 @@ function DefaultLayout ({ children }) {
 
   return (
     <Box style={styles.mobile}>
-      <Box>
-        <Appbar />
-        {children}
-      </Box>
+      <Appbar />
+      {children}
       <BottomNavigation />
     </Box>
   )

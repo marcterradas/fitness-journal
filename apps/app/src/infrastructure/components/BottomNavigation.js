@@ -11,8 +11,8 @@ function BottomNavigation () {
 
   const routesList = [
     { key: 'home', title: t('navigation.label.home'), focusedIcon: 'home', unfocusedIcon: 'home-outline' },
-    { key: 'profile', title: t('navigation.label.profile'), focusedIcon: 'account', unfocusedIcon: 'account-outline' },
     { key: 'workout', title: t('navigation.label.workout'), focusedIcon: 'arm-flex', unfocusedIcon: 'arm-flex-outline' },
+    { key: 'profile', title: t('navigation.label.profile'), focusedIcon: 'account', unfocusedIcon: 'account-outline' },
     { key: 'settings', title: t('navigation.label.settings'), focusedIcon: 'cog', unfocusedIcon: 'cog-outline' }
   ]
 

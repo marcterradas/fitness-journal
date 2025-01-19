@@ -36,7 +36,10 @@ function Dialog ({ visible, onDismiss, onConfirm, title, content }) {
         </PaperDialog.Content>
         <PaperDialog.Actions>
           <Box style={styles.element}>
-            <Button onPress={onDismiss}>
+            <Button
+              mode="text"
+              onPress={onDismiss}
+            >
               {t('common.label.cancel')}
             </Button>
             <Button onPress={onConfirm}>

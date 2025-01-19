@@ -3,7 +3,6 @@ import { BottomNavigation } from '@/infrastructure/components/BottomNavigation'
 import { Box } from '@/infrastructure/components/Box'
 import { useDimensions } from '@/infrastructure/hooks/useDimensions'
 import { useStyles } from '@/infrastructure/hooks/useStyles'
-import { spacerHalf } from '@/infrastructure/styles'
 
 function DefaultLayout ({ children }) {
   const { screenHeight, screenWidth } = useDimensions()
@@ -15,9 +14,6 @@ function DefaultLayout ({ children }) {
       width: screenWidth,
       justifyContent: 'space-between',
       flex: 1
-    },
-    content: {
-      padding: spacerHalf
     }
   })
 
@@ -25,9 +21,7 @@ function DefaultLayout ({ children }) {
     <Box style={styles.mobile}>
       <Box>
         <Appbar />
-        <Box style={styles.content}>
-          {children}
-        </Box>
+        {children}
       </Box>
       <BottomNavigation />
     </Box>

@@ -1,9 +1,17 @@
-import { PaperProvider } from 'react-native-paper'
+import { MD3LightTheme as DefaultTheme, PaperProvider } from 'react-native-paper'
 
+import { colors } from '@/infrastructure/styles'
 function Components ({ children }) {
-  // TODO: remove light theme.
+  const theme = {
+    ...DefaultTheme,
+    myOwnProperty: true,
+    colors: {
+      ...DefaultTheme.colors,
+      background: colors.white
+    }
+  }
   return (
-    <PaperProvider theme={'light'}>
+    <PaperProvider theme={theme}>
       {children}
     </PaperProvider>
   )

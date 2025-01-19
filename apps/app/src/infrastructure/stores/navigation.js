@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 const useNavigationStore = create((set) => ({
-  currentRoute: null,
+  currentRoute: 'home',
   setCurrentRoute: (route) => set({ currentRoute: route })
 }))
 

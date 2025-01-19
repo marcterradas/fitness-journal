@@ -19,7 +19,8 @@ const colors = {
   blackLightest: '#343A40',
   darkGray: '#ADB5BD',
   white: '#F8F9FA',
-  lightGray: '#E9ECEF'
+  lightGray: '#E9ECEF',
+  red: '#DC3545'
 }
 
 export {

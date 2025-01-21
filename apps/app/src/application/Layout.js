@@ -5,7 +5,7 @@ import LoginView from '@/application/screens/Login'
 import { SafeArea } from '@/infrastructure/components/SafeArea'
 import { useUserStore } from '@/infrastructure/stores/user'
 
-function Layout ({ children }) {
+function Layout () {
   const user = useUserStore((state) => state.user)
 
   if (!user) {

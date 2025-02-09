@@ -21,7 +21,8 @@
     "api:test": "cd ./apps/api && npm test",
     "lint": "eslint .",
     "test": "npm run app:test && npm run api:test",
-    "prepare": "husky"
+    "prepare": "husky",
+    "clean": "rm -rf node_modules && rm -rf apps/*/node_modules && rm -rf package-lock.json && rm -rf apps/app/.expo"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

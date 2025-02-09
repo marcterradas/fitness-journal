@@ -64,3 +64,13 @@ npm run test
 ```
 npm run lint
 ```
+
+### Prepare commit
+```
+npm run prepare
+```
+
+### Clean dependencies
+```
+npm run clean
+```

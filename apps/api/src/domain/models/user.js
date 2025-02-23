@@ -22,17 +22,17 @@ export class User {
   }
 
   set _id (value) {
-    if (!value) throw new Error('Invalid _id')
+    if (!value || typeof value !== 'string') throw new Error('Invalid _id.')
     this.#_id = value
   }
 
   set username (value) {
-    if (!value || typeof value !== 'string') throw new Error('Invalid username')
+    if (!value || typeof value !== 'string') throw new Error('Invalid username.')
     this.#username = value
   }
 
   set password (value) {
-    if (!value || typeof value !== 'string') throw new Error('Invalid password')
+    if (!value || typeof value !== 'string') throw new Error('Invalid password.')
     this.#password = value
   }
 }

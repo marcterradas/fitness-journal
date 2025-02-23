@@ -1,6 +1,6 @@
-import { encrypt, sanitize } from './utils.js'
-import config from '../infrastructure/config.js'
-import { client } from '../infrastructure/database.js'
+import config from '../../infrastructure/config.js'
+import { client } from '../../infrastructure/database.js'
+import { encrypt, sanitize } from '../utils.js'
 
 /**
  * Handles user login.

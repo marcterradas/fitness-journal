@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
 
-import config from '../src/infrastructure/config.js'
-import { server } from '../src/infrastructure/server.js'
-import '../src/application/routes.js'
+import config from '../../../src/infrastructure/config.js'
+import { server } from '../../../src/infrastructure/server.js'
+import '../../../src/application/routes.js'
 
 describe('login', () => {
   const method = 'POST'

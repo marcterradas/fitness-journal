@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 
-import { encrypt, sanitize } from '../src/domain/utils'
+import { encrypt, sanitize } from '../../src/domain/utils'
 
 describe('encrypt', () => {
   it('should return false for an empty string', () => {

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
-import config from '../src/infrastructure/config'
-import { client } from '../src/infrastructure/database'
+import config from '../../src/infrastructure/config'
+import { client } from '../../src/infrastructure/database'
 
 describe('test database connection', () => {
   it('should connect to the database', async () => {

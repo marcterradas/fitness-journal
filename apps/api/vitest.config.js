@@ -6,6 +6,7 @@ export default defineConfig({
     include: [
       '**/test/domain/*.{js,tsx,ts}',
       '**/test/domain/handlers/*.{js,tsx,ts}',
+      '**/test/domain/models/*.{js,tsx,ts}',
       '**/test/infrastructure/*.{js,tsx,ts}'
     ],
     // Load .env file without any mode.

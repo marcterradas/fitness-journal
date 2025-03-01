@@ -1,3 +1,5 @@
+'use strict'
+
 export class User {
   #_id
   #username

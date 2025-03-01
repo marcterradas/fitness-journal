@@ -1,3 +1,5 @@
+'use strict'
+
 import mongodb, { ObjectId } from 'mongodb'
 
 import config from './config.js'

@@ -1,3 +1,5 @@
+'use strict'
+
 import { login } from '../domain/handlers/auth.js'
 import { getUser } from '../domain/handlers/user.js'
 import { server } from '../infrastructure/server.js'

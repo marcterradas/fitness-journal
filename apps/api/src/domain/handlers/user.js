@@ -1,3 +1,5 @@
+'use strict'
+
 import config from '../../infrastructure/config.js'
 import { client, ObjectId } from '../../infrastructure/database.js'
 import { sanitize } from '../utils.js'

@@ -1,3 +1,5 @@
+'use strict'
+
 export default {
   port: 3000,
   database: process.env.DATABASE_NAME,

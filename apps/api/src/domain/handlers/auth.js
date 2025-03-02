@@ -1,7 +1,6 @@
 'use strict'
 
-import config from '../../infrastructure/config.js'
-import { client } from '../../infrastructure/database.js'
+import { getUserByUsernameAndPassword } from '../../infrastructure/repositories/user.js'
 import { encrypt, sanitize } from '../utils.js'
 
 /**
@@ -25,8 +24,7 @@ async function login (request, reply) {
   if (!password) reply.code(400).send({ message: 'password is required.' })
 
   try {
-    const users = client.db(config.database).collection(config.usersCollection)
-    const user = await users.findOne({ username, password: encryptedPassword })
+    const user = await getUserByUsernameAndPassword(username, encryptedPassword)
 
     if (!user) reply.code(404).send({ message: 'user not found.' })
 

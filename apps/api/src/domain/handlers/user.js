@@ -1,7 +1,6 @@
 'use strict'
 
-import config from '../../infrastructure/config.js'
-import { client, ObjectId } from '../../infrastructure/database.js'
+import { getUserById } from '../../infrastructure/repositories/user.js'
 import { sanitize } from '../utils.js'
 
 /**
@@ -24,8 +23,7 @@ async function getUser (req, res) {
   if (!userId) return res.status(400).send('userId is required.')
 
   try {
-    const users = client.db(config.database).collection(config.usersCollection)
-    const user = await users.findOne({ _id: new ObjectId(userId) })
+    const user = await getUserById(userId)
 
     if (!user) return res.status(404).send('user not found.')
 

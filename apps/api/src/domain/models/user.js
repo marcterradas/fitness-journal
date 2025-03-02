@@ -1,6 +1,6 @@
 'use strict'
 
-export class User {
+class User {
   #_id
   #username
   #password
@@ -37,4 +37,8 @@ export class User {
     if (!value || typeof value !== 'string') throw new Error('Invalid password.')
     this.#password = value
   }
+}
+
+export {
+  User
 }

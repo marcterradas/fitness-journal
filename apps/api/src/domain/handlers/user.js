@@ -1,5 +1,3 @@
-'use strict'
-
 import { getUserById } from '../../infrastructure/repositories/user.js'
 import { sanitize } from '../utils.js'
 

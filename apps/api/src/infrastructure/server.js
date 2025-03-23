@@ -1,5 +1,3 @@
-'use strict'
-
 import cors from '@fastify/cors'
 import Fastify from 'fastify'
 

@@ -1,5 +1,3 @@
-'use strict'
-
 /**
  * Encodes a string using Base64 encoding.
  *

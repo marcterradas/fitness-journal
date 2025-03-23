@@ -1,5 +1,3 @@
-'use strict'
-
 import config from '../../infrastructure/config.js'
 
 const exercisesNames = config.exercises.map(exercise => exercise.name)

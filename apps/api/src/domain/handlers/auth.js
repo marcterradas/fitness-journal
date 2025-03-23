@@ -1,5 +1,3 @@
-'use strict'
-
 import { getUserByUsernameAndPassword } from '../../infrastructure/repositories/user.js'
 import { encrypt, sanitize } from '../utils.js'
 

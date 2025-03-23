@@ -1,5 +1,3 @@
-'use strict'
-
 import { describe, it, expect } from 'vitest'
 
 import { Exercise } from '../../../src/domain/models/exercise'
